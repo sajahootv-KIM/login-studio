@@ -5,503 +5,66 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>로그인스튜디오 | 영상으로 브랜드를 더 선명하게</title>
 <style>
-:root {
-  /* 신뢰성을 높이는 블루 & 슬레이트 컬러 팔레트 */
-  --primary: #0F172A;       /* 깊은 신뢰감을 주는 디프 네이비 */
-  --primary-blue: #1E40AF;  /* 고전적인 블루 (강조/타이틀) */
-  --accent-blue: #2563EB;   /* 활력 있는 신뢰 블루 (버튼/포인트) */
-  --light-blue: #EFF6FF;    /* 가벼운 블루 배경 */
-  --text-main: #334155;     /* 본문: 가독성 높은 슬레이트 그레이 */
-  --text-muted: #64748B;    /* 보조: 쿨 그레이 */
-  --bg-main: #FFFFFF;       /* 기본 배경 */
-  --bg-sub: #F8FAFC;        /* 서브 섹션 배경 */
-  --border-color: #E2E8F0;  /* 경계선 */
-  --card-bg: #FFFFFF;
-}
+:root{--y:#FFF2A8;--y2:#FFF9D8;--b:#171717;--m:#666;--w:#fffdf7;--l:#e5dcaa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;color:var(--b);background:var(--y2);line-height:1.6}
+a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 28px}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,242,168,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--l)}
+.navin{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:22px;font-weight:900}.menu{display:flex;gap:25px;font-size:14px;font-weight:800}
+.btn{display:inline-flex;background:#111;color:#fff;padding:14px 22px;border-radius:999px;font-weight:800;font-size:14px}
+.hero{padding:72px 0 30px;background:var(--y)}.hero-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:42px;align-items:center}
+.kicker,.eyebrow{font-size:12px;font-weight:900;letter-spacing:2px}.kicker{margin-bottom:17px}
+h1{font-size:clamp(48px,6.5vw,82px);line-height:1.02;letter-spacing:-5px;margin:0 0 24px}.hero p{font-size:18px;color:#4f4f4f;margin-bottom:30px}
+.hero-photo{height:520px;border-radius:30px;overflow:hidden;position:relative;box-shadow:12px 15px 0 rgba(0,0,0,.08)}.hero-photo img{width:100%;height:100%;object-fit:cover}.tag{position:absolute;left:20px;bottom:20px;background:white;padding:9px 15px;border-radius:999px;font-size:12px;font-weight:900}
+section{padding:100px 0}.services,.process{background:var(--w)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}
+h2{font-size:46px;line-height:1.08;letter-spacing:-3px;margin:8px 0 0}.section-head p{max-width:440px;color:var(--m);margin:0}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{border:1px solid var(--l);border-radius:22px;padding:27px;background:#fff;min-height:215px}.num{font-size:12px;color:#999;font-weight:900}.card h3{font-size:22px;margin:43px 0 9px}.card p{font-size:14px;color:var(--m);margin:0}
+.about{background:#171717;color:#fff}.about .section-head p{color:#bbb}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.about-box{border:1px solid #333;border-radius:24px;overflow:hidden}.about-box img{width:100%;height:280px;object-fit:cover;display:block}.copy{padding:28px}.copy strong{font-size:26px}.copy p{color:#bbb;margin:10px 0 0}
+.portfolio{background:var(--y)}.port-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}.port-item{height:350px;border-radius:24px;overflow:hidden;position:relative;background:#111}.port-item img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.72)}.port-text{position:absolute;left:25px;bottom:22px;color:#fff}.port-text h3{font-size:28px;margin:0}.port-text p{margin:3px 0;opacity:.8}.port-small{display:grid;grid-template-columns:1fr 1fr;gap:18px}.port-small .port-item{height:350px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{padding:23px;border-top:2px solid #111}.step b{font-size:12px}.step h3{margin:27px 0 7px}.step p{font-size:13px;color:var(--m)}
+.quote{background:var(--y)}.form{background:#fff;border-radius:28px;padding:40px;max-width:820px;margin:auto}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+label{font-size:13px;font-weight:800;display:block;margin-bottom:6px}input,select,textarea{width:100%;border:1px solid #ddd;border-radius:12px;padding:14px;font:inherit;background:#fff}textarea{min-height:125px}.full{grid-column:1/-1}.submit{width:100%;border:0;cursor:pointer;margin-top:17px}
+.contact{background:#fff;padding:30px 0;border-top:1px solid var(--l)}.contactin{display:flex;justify-content:space-between;gap:20px}.contact p{margin:0;font-size:14px}footer{background:#111;color:#fff;padding:45px 0}.footerin{display:flex;justify-content:space-between}.footerin p{color:#aaa;font-size:13px}
+@media(max-width:850px){.menu{display:none}.hero-grid,.about-grid,.port-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.hero-photo{height:390px}.section-head{display:block}.section-head p{margin-top:18px}}
+@media(max-width:520px){.parking-note{align-items:flex-start}.parking-note strong{font-size:15px}.wrap{padding:0 18px}.hero{padding-top:60px}section{padding:72px 0}.cards,.form-grid{grid-template-columns:1fr}h2{font-size:38px}.hero-photo{height:310px}.port-small{grid-template-columns:1fr}.port-small .port-item{height:260px}.contactin,.footerin{display:block}.contact p{margin-top:8px}}
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:Arial,"Noto Sans KR",sans-serif;
-  color:var(--text-main);
-  background:var(--bg-main);
-  line-height:1.6;
-}
-a{text-decoration:none;color:inherit}
-.wrap{max-width:1180px;margin:auto;padding:0 28px}
-
-/* 네비게이션 */
-nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:rgba(255, 255, 255, 0.92);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border-color);
-}
-.navin{height:76px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:22px;font-weight:900;color:var(--primary)}
-.menu{display:flex;gap:25px;font-size:14px;font-weight:800;color:var(--text-main)}
-.menu a:hover{color:var(--accent-blue)}
-.btn{
-  display:inline-flex;
-  background:var(--accent-blue);
-  color:#fff;
-  padding:14px 22px;
-  border-radius:999px;
-  font-weight:800;
-  font-size:14px;
-  transition:background 0.2s;
-}
-.btn:hover{background:var(--primary-blue)}
-
-/* 히어로 섹션 */
-.hero{padding:72px 0 60px;background:linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%)}
-.hero-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:42px;align-items:center}
-.kicker,.eyebrow{font-size:12px;font-weight:900;letter-spacing:2px;color:var(--accent-blue)}
-.kicker{margin-bottom:17px}
-h1{
-  font-size:clamp(48px,6.5vw,82px);
-  line-height:1.05;
-  letter-spacing:-3px;
-  margin:0 0 24px;
-  color:var(--primary);
-}
-.hero p{font-size:18px;color:var(--text-muted);margin-bottom:30px}
-.hero-photo{
-  height:520px;
-  border-radius:30px;
-  overflow:hidden;
-  position:relative;
-  box-shadow:0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
-}
-.hero-photo img{width:100%;height:100%;object-fit:cover}
-.tag{
-  position:absolute;
-  left:20px;
-  bottom:20px;
-  background:rgba(255, 255, 255, 0.95);
-  color:var(--primary);
-  padding:9px 17px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:900;
-  box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);
-}
-
-/* 섹션 공통 */
-section{padding:100px 0}
-.services,.process{background:var(--bg-sub)}
-.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}
-h2{font-size:46px;line-height:1.08;letter-spacing:-2px;margin:8px 0 0;color:var(--primary)}
-.section-head p{max-width:440px;color:var(--text-muted);margin:0}
-
-/* 서비스 카드리스트 */
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.card{
-  border:1px solid var(--border-color);
-  border-radius:22px;
-  padding:27px;
-  background:var(--card-bg);
-  min-height:215px;
-  box-shadow:0 1px 3px rgba(0,0,0,0.05);
-  transition:transform 0.2s, box-shadow 0.2s;
-}
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 10px 15px -3px rgba(37, 99, 235, 0.1);
-}
-.num{font-size:13px;color:var(--accent-blue);font-weight:900}
-.card h3{font-size:22px;margin:22px 0 9px;color:var(--primary)}
-.card p{font-size:14px;color:var(--text-muted);margin:0}
-
-/* 스튜디오 소개 (Dark Navy Theme) */
-.about{background:var(--primary);color:#fff}
-.about h2{color:#fff}
-.about .section-head p{color:#94A3B8}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.about-box{border:1px solid #334155;border-radius:24px;overflow:hidden;background:#1E293B}
-.about-box img{width:100%;height:280px;object-fit:cover;display:block}
-.copy{padding:28px}
-.copy strong{font-size:26px;color:#F1F5F9}
-.copy p{color:#94A3B8;margin:10px 0 0}
-
-/* 포트폴리오 */
-.portfolio{background:var(--bg-main)}
-.port-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}
-.port-item{height:350px;border-radius:24px;overflow:hidden;position:relative;background:#0F172A}
-.port-item img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.78)}
-.port-text{position:absolute;left:25px;bottom:22px;color:#fff}
-.port-text h3{font-size:28px;margin:0;color:#F8FAFC}
-.port-text p{margin:3px 0;opacity:.85;color:#E2E8F0}
-.port-small{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.port-small .port-item{height:350px}
-
-/* 프로세스 단계 */
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.step{padding:23px;border-top:3px solid var(--accent-blue);background:#fff;border-radius:0 0 16px 16px}
-.step b{font-size:12px;color:var(--accent-blue)}
-.step h3{margin:27px 0 7px;color:var(--primary)}
-.step p{font-size:13px;color:var(--text-muted)}
-
-/* 견적 문의 폼 */
-.quote{background:linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%)}
-.form{
-  background:#fff;
-  border:1px solid var(--border-color);
-  border-radius:28px;
-  padding:40px;
-  max-width:820px;
-  margin:auto;
-  box-shadow:0 10px 25px -5px rgba(15, 23, 42, 0.05);
-}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-label{font-size:13px;font-weight:800;display:block;margin-bottom:6px;color:var(--primary)}
-input,select,textarea{
-  width:100%;
-  border:1px solid var(--border-color);
-  border-radius:12px;
-  padding:14px;
-  font:inherit;
-  background:#F8FAFC;
-  color:var(--text-main);
-}
-input:focus,select:focus,textarea:focus{
-  outline:none;
-  border-color:var(--accent-blue);
-  background:#fff;
-}
-textarea{min-height:125px}
-.full{grid-column:1/-1}
-.submit{width:100%;border:0;cursor:pointer;margin-top:17px}
-
-/* 안내 및 오시는 길 아이콘 요소 */
-.service-icon{
-  width:46px;
-  height:46px;
-  border-radius:14px;
-  background:var(--light-blue);
-  border:1px solid #BFDBFE;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:16px 0 0;
-  color:var(--accent-blue);
-}
+.service-icon{width:46px;height:46px;border-radius:14px;background:#fff8cf;border:1px solid #eadb91;display:flex;align-items:center;justify-content:center;margin:16px 0 0;color:#171717}
 .service-icon svg{width:25px;height:25px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-
-.parking-note{
-  margin-top:20px;
-  border:1px solid #BFDBFE;
-  background:var(--light-blue);
-  border-radius:18px;
-  padding:18px 22px;
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-.parking-icon{
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  background:var(--accent-blue);
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:900;
-  font-size:18px;
-  flex:0 0 auto;
-}
-.parking-note strong{font-size:17px;color:var(--primary)}
-.parking-note span{display:block;color:var(--text-muted);font-size:13px;margin-top:2px}
-
-/* 푸터 및 하단 정보 */
-.contact{background:#fff;padding:30px 0;border-top:1px solid var(--border-color)}
-.contactin{display:flex;justify-content:space-between;gap:20px}
-.contact p{margin:0;font-size:14px;color:var(--text-muted)}
-.contact strong{color:var(--primary)}
-
-footer{background:var(--primary);color:#fff;padding:45px 0}
-.footerin{display:flex;justify-content:space-between}
-.footerin p{color:#94A3B8;font-size:13px}
-
-/* 반응형 모바일 커스텀 */
-@media(max-width:850px){
-  .menu{display:none}
-  .hero-grid,.about-grid,.port-grid{grid-template-columns:1fr}
-  .cards{grid-template-columns:1fr 1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .hero-photo{height:390px}
-  .section-head{display:block}
-  .section-head p{margin-top:18px}
-}
-@media(max-width:520px){
-  .parking-note{align-items:flex-start}
-  .parking-note strong{font-size:15px}
-  .wrap{padding:0 18px}
-  .hero{padding-top:60px}
-  section{padding:72px 0}
-  .cards,.form-grid{grid-template-columns:1fr}
-  h2{font-size:38px}
-  .hero-photo{height:310px}
-  .port-small{grid-template-columns:1fr}
-  .port-small .port-item{height:260px}
-  .contactin,.footerin{display:block}
-  .contact p{margin-top:8px}
-}
-</style>
-</head>
+.card h3{margin:22px 0 9px}
+.parking-note{margin-top:20px;border:1px solid #eadb91;background:#fff8cf;border-radius:18px;padding:18px 22px;display:flex;align-items:center;gap:14px}
+.parking-icon{width:42px;height:42px;border-radius:50%;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;flex:0 0 auto}
+.parking-note strong{font-size:17px}.parking-note span{display:block;color:#666;font-size:13px;margin-top:2px}
+</style></head>
 <body>
+<nav><div class="wrap navin"><a class="logo" href="#">로그인스튜디오</a><div class="menu"><a href="#services">서비스</a><a href="#about">스튜디오</a><a href="#portfolio">포트폴리오</a><a href="#process">제작과정</a><a href="#quote">견적문의</a></div><a class="btn" href="#quote">견적 문의</a></div></nav>
 
-<nav>
-  <div class="wrap navin">
-    <a class="logo" href="#">로그인스튜디오</a>
-    <div class="menu">
-      <a href="#services">서비스</a>
-      <a href="#about">스튜디오</a>
-      <a href="#portfolio">포트폴리오</a>
-      <a href="#process">제작과정</a>
-      <a href="#quote">견적문의</a>
-    </div>
-    <a class="btn" href="#quote">견적 문의</a>
-  </div>
-</nav>
+<header class="hero"><div class="wrap hero-grid"><div><div class="kicker">LOGIN STUDIO · VIDEO CONTENT</div><h1>영상으로<br>브랜드를<br>더 선명하게.</h1><p>기획부터 촬영, 편집, 유튜브 운영까지.<br>로그인스튜디오의 실제 스튜디오에서 브랜드의 이야기를 콘텐츠로 만듭니다.</p><a class="btn" href="#quote">프로젝트 문의하기 →</a></div><div class="hero-photo"><img src="image/studio.jpg" alt="로그인스튜디오 촬영 스튜디오"><div class="tag">LOGIN STUDIO · SHOOTING SPACE</div></div></div></header>
 
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="kicker">LOGIN STUDIO · VIDEO CONTENT</div>
-      <h1>영상으로<br>브랜드를<br>더 선명하게.</h1>
-      <p>기획부터 촬영, 편집, 유튜브 운영까지.<br>로그인스튜디오의 실제 스튜디오에서 브랜드의 이야기를 콘텐츠로 만듭니다.</p>
-      <a class="btn" href="#quote">프로젝트 문의하기 →</a>
-    </div>
-    <div class="hero-photo">
-      <img src="image/20260826_122224.jpg" alt="로그인스튜디오의 메인 촬영 공간">
-      <div class="tag">LOGIN STUDIO</div>
-    </div>
-  </div>
-</header>
+<section id="services" class="services"><div class="wrap"><div class="section-head"><div><div class="eyebrow">WHAT WE DO</div><h2>필요한 영상만<br>깔끔하게.</h2></div><p>복잡한 제작 과정을 줄이고 목적에 맞는 콘텐츠를 제작합니다.</p></div><div class="cards">
+<div class="card"><div class="num">01</div><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="m10 9 5 3-5 3z"></path></svg></div><h3>유튜브 대행</h3><p>채널 기획부터 영상 제작, 업로드까지 운영을 함께합니다.</p></div>
+<div class="card"><div class="num">02</div><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"></rect><path d="m10 9 5 3-5 3z"></path></svg></div><h3>쇼츠 제작</h3><p>짧고 강한 메시지로 시선을 끄는 세로형 콘텐츠를 제작합니다.</p></div>
+<div class="card"><div class="num">03</div><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-5 8 5v12"></path><path d="M8 20v-6h8v6"></path><path d="M9 9h6"></path></svg></div><h3>기업 홍보영상</h3><p>회사와 제품의 강점을 쉽고 명확하게 보여드립니다.</p></div>
+<div class="card"><div class="num">04</div><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9h10v8H4z"></path><path d="m14 12 6-3v9l-6-3"></path><circle cx="8" cy="18" r="2"></circle></svg></div><h3>촬영 · 편집</h3><p>촬영부터 자막, 음악, 색보정까지 완성도 있게 작업합니다.</p></div></div>
+<div class="parking-note"><div class="parking-icon">P</div><div><strong>주차 10여 대 가능</strong><span>차량으로 방문하시는 고객도 편하게 이용하실 수 있습니다.</span></div></div></div></section>
 
-<section id="services" class="services">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">OUR SERVICES</span>
-        <h2>스튜디오 올인원 서비스</h2>
-      </div>
-      <p>체계적인 기획과 검증된 제작 프로세스로 브랜드 가치를 완성합니다.</p>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <span class="num">01</span>
-        <h3>브랜드 영상 제작</h3>
-        <p>브랜드의 아이덴티티와 스토리를 선명하게 담아내는 홍보 영상을 기획 및 제작합니다.</p>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
-        </div>
-      </div>
-      <div class="card">
-        <span class="num">02</span>
-        <h3>유튜브 채널 운영</h3>
-        <p>지속적인 성장을 위한 유튜브 채널의 컨셉 설정부터 콘텐츠 제작, 운영 관리까지 총괄합니다.</p>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-        </div>
-      </div>
-      <div class="card">
-        <span class="num">03</span>
-        <h3>숏폼 콘텐츠 제작</h3>
-        <p>릴스, 쇼츠, 틱톡 등 높은 몰입도를 가진 숏폼 비디오로 트렌디한 마케팅을 전개합니다.</p>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-        </div>
-      </div>
-      <div class="card">
-        <span class="num">04</span>
-        <h3>스튜디오 대관</h3>
-        <p>전문 촬영 장비와 최적화된 조명 시스템을 갖춘 프리미엄 스튜디오 공간을 제공합니다.</p>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="about" class="about"><div class="wrap"><div class="section-head"><div><div class="eyebrow">LOGIN STUDIO</div><h2>실제 촬영공간에서<br>콘텐츠를 만듭니다.</h2></div><p>촬영 공간과 장비, 편집 환경을 갖춘 로그인스튜디오에서 브랜드와 사업자의 이야기를 영상으로 제작합니다.</p></div>
+<div class="about-grid"><div class="about-box"><img src="image/meeting.jpg" alt="로그인스튜디오 상담 공간"><div class="copy"><strong>편안한 상담 공간</strong><p>촬영 전 기획과 콘셉트를 편안하게 이야기할 수 있는 공간입니다.</p></div></div>
+<div class="about-box"><img src="image/equipment.jpg" alt="로그인스튜디오 제작 장비"><div class="copy"><strong>촬영 · 컨트롤 환경</strong><p>카메라, 조명, 음향 장비를 활용해 인터뷰와 유튜브 콘텐츠를 제작합니다.</p></div></div></div></div></section>
 
-<section id="about" class="about">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow" style="color: #60A5FA;">STUDIO SPACE</span>
-        <h2>로그인스튜디오 공간</h2>
-      </div>
-      <p>촬영 효율을 최대한 극대화할 수 있도록 설계된 전문 제작 환경입니다.</p>
-    </div>
-    <div class="about-grid">
-      <div class="about-box">
-        <img src="image/20260826_122224.jpg" alt="조명과 카메라 장비를 갖춘 메인 촬영 스튜디오">
-        <div class="copy">
-          <strong>A-ROOM : 메인 촬영 호리존</strong>
-          <p>크로마키 및 라이브 방송, 대형 영상 촬영이 가능한 스튜디오 대표 공간입니다.</p>
-        </div>
-      </div>
-      <div class="about-box">
-        <img src="image/20260826_122142.jpg" alt="음향 콘솔과 촬영 장비가 갖춰진 스튜디오">
-        <div class="copy">
-          <strong>B-ROOM : 라이브스타일 컨셉룸</strong>
-          <p>인터뷰, 토크쇼, 제품 리뷰 영상 제작에 매력적인 편안한 인테리어 스튜디오입니다.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="portfolio" class="portfolio"><div class="wrap"><div class="section-head"><div><div class="eyebrow">STUDIO GALLERY</div><h2>우리 공간에서<br>이렇게 제작합니다.</h2></div><p>로그인스튜디오의 실제 공간과 촬영 환경을 확인해보세요.</p></div>
+<div class="port-grid"><div class="port-item"><img src="image/studio.jpg" alt="촬영 스튜디오"><div class="port-text"><h3>촬영 스튜디오</h3><p>Interview · YouTube · Brand Video</p></div></div><div class="port-small">
+<div class="port-item"><img src="image/meeting.jpg" alt="상담 공간"><div class="port-text"><h3>상담 공간</h3><p>Meeting</p></div></div>
+<div class="port-item"><img src="image/equipment.jpg" alt="제작 환경"><div class="port-text"><h3>제작 환경</h3><p>Camera · Light · Audio</p></div></div></div></div></div></section>
 
-<section id="portfolio" class="portfolio">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">PORTFOLIO</span>
-        <h2>제작 포트폴리오</h2>
-      </div>
-      <p>수많은 기업 및 브랜드와 함께 만든 주요 콘텐츠 결과를 확인하세요.</p>
-    </div>
-    <div class="port-grid">
-      <div class="port-item">
-        <img src="image/20260915_140445.jpg" alt="로그인스튜디오 촬영 장비와 카메라">
-        <div class="port-text">
-          <h3>IT 테크 브랜드 홍보 영상</h3>
-          <p>제품 가치 전달을 강조한 브랜드 필름</p>
-        </div>
-      </div>
-      <div class="port-small">
-        <div class="port-item">
-          <img src="image/20260826_122203.jpg" alt="스튜디오 내 휴게 공간">
-          <div class="port-text">
-            <h3>패션 브랜드 릴스 시리즈</h3>
-            <p>트렌디한 숏폼 마케팅</p>
-          </div>
-        </div>
-        <div class="port-item">
-          <img src="image/20260827_123157.jpg" alt="영상 촬영용 카메라와 음향 장비">
-          <div class="port-text">
-            <h3>유튜브 토크쇼 웹예능</h3>
-            <p>브랜드 협찬 오리지널 쇼</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="process" class="process"><div class="wrap"><div class="section-head"><div><div class="eyebrow">PROCESS</div><h2>간단하게<br>진행합니다.</h2></div></div><div class="steps">
+<div class="step"><b>STEP 01</b><h3>상담</h3><p>목적과 필요한 영상을 확인합니다.</p></div><div class="step"><b>STEP 02</b><h3>기획</h3><p>콘셉트와 구성안을 정리합니다.</p></div><div class="step"><b>STEP 03</b><h3>제작</h3><p>촬영 및 편집을 진행합니다.</p></div><div class="step"><b>STEP 04</b><h3>수정</h3><p>검토 후 필요한 부분을 반영합니다.</p></div><div class="step"><b>STEP 05</b><h3>납품</h3><p>최종 파일을 전달합니다.</p></div></div></div></section>
 
-<section id="process" class="process">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">PROCESS</span>
-        <h2>체계적인 제작 과정</h2>
-      </div>
-      <p>상담부터 최종 납품까지 투명하고 명확한 단계를 거칩니다.</p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <b>STEP 01</b>
-        <h3>사전 상담 및 기획</h3>
-        <p>프로젝트 목표 설정, 타겟 분석 및 영상 연출 컨셉을 도출합니다.</p>
-      </div>
-      <div class="step">
-        <b>STEP 02</b>
-        <h3>시나리오 및 콘티</h3>
-        <p>전문 구성을 위한 스크립트 작성과 스토리보드를 확정합니다.</p>
-      </div>
-      <div class="step">
-        <b>STEP 03</b>
-        <h3>스튜디오 촬영</h3>
-        <p>전용 연출 장비와 정교한 조명을 활용해 촬영을 진행합니다.</p>
-      </div>
-      <div class="step">
-        <b>STEP 04</b>
-        <h3>후반 후속 편집</h3>
-        <p>컷 편집, 컬러 그레이딩, CG 및 자막 작업으로 완성도를 높입니다.</p>
-      </div>
-      <div class="step">
-        <b>STEP 05</b>
-        <h3>검수 및 최종 납품</h3>
-        <p>피드백을 반영한 최종 수정 후 고화질 원본 및 마케팅 본을 전달합니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="quote" class="quote"><div class="wrap"><div class="section-head"><div><div class="eyebrow">CONTACT</div><h2>프로젝트를<br>시작해보세요.</h2></div><p>제작하고 싶은 영상의 내용을 남겨주시면 확인 후 연락드리겠습니다.</p></div>
+<form class="form" onsubmit="event.preventDefault();alert('문의 내용이 입력되었습니다. 실제 접수 기능은 메일/폼 연결 후 사용할 수 있습니다.');"><div class="form-grid">
+<div><label>이름 / 회사명</label><input required placeholder="홍길동 / 회사명"></div><div><label>연락처</label><input required placeholder="010-0000-0000"></div>
+<div><label>이메일</label><input type="email" placeholder="example@email.com"></div><div><label>제작 유형</label><select><option>선택해주세요</option><option>유튜브 대행</option><option>쇼츠 제작</option><option>기업 홍보영상</option><option>촬영·편집</option><option>기타</option></select></div>
+<div class="full"><label>예상 예산</label><input placeholder="예: 100만원 / 협의"></div><div class="full"><label>프로젝트 내용</label><textarea placeholder="원하시는 영상, 일정, 참고자료 등을 자유롭게 적어주세요."></textarea></div>
+</div><button class="btn submit" type="submit">견적 문의 보내기 →</button></form></div></section>
 
-<section id="quote" class="quote">
-  <div class="wrap">
-    <div class="form">
-      <div style="text-align:center;margin-bottom:30px">
-        <span class="eyebrow">PROJECT INQUIRY</span>
-        <h2 style="margin-top:5px">프로젝트 견적 문의</h2>
-        <p style="color:var(--text-muted);margin-top:8px">원하시는 프로젝트 내용을 남겨주시면 24시간 이내에 전담 PD가 답변드립니다.</p>
-      </div>
-      <form class="form-grid" onsubmit="event.preventDefault(); alert('문의가 성공적으로 접수되었습니다.');">
-        <div>
-          <label>성함 / 담당자명</label>
-          <input type="text" placeholder="홍길동 팀장" required>
-        </div>
-        <div>
-          <label>회사 / 브랜드명</label>
-          <input type="text" placeholder="로그인 스튜디오" required>
-        </div>
-        <div>
-          <label>이메일 주소</label>
-          <input type="email" placeholder="contact@loginstudio.com" required>
-        </div>
-        <div>
-          <label>연락처</label>
-          <input type="tel" placeholder="010-0000-0000" required>
-        </div>
-        <div class="full">
-          <label>문의 분야</label>
-          <select required>
-            <option value="">서비스 항목을 선택해 주세요</option>
-            <option value="brand">브랜드 영상 제작</option>
-            <option value="youtube">유튜브 채널 운영대행</option>
-            <option value="shortform">숏폼 콘텐츠 제작</option>
-            <option value="rental">스튜디오 대관 문의</option>
-          </select>
-        </div>
-        <div class="full">
-          <label>프로젝트 세부 내용 및 예산 범위</label>
-          <textarea placeholder="희망 제작 일정, 연출 방향, 예산 범위 등을 상세히 입력해주세요."></textarea>
-        </div>
-        <div class="full">
-          <button type="submit" class="btn submit">견적 신청하기</button>
-        </div>
-      </form>
-
-      <div class="parking-note">
-        <div class="parking-icon">P</div>
-        <div>
-          <strong>무료 주차 서비스 제공</strong>
-          <span>스튜디오 방문 시 건물 내 전용 주차 공간을 편리하게 이용하실 수 있습니다.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="contact">
-  <div class="wrap contactin">
-    <p><strong>LOG IN STUDIO</strong> | 서울시 강남구 테헤란로 000 로그인빌딩 B1-2F</p>
-    <p><strong>TEL:</strong> 02-1234-5678 | <strong>EMAIL:</strong> info@loginstudio.kr</p>
-  </div>
-</div>
-
-<footer>
-  <div class="wrap footerin">
-    <p>© 2026 LOGIN STUDIO. All Rights Reserved.</p>
-    <p>Privacy Policy | Terms of Service</p>
-  </div>
-</footer>
-
-</body>
-</html>
+<div class="contact"><div class="wrap contactin"><p><strong>로그인스튜디오</strong> · 영상으로 브랜드를 더 선명하게.</p><p>010-8280-9255 · audiogod@naver.com</p></div></div>
+<footer><div class="wrap footerin"><div><div class="logo">로그인스튜디오</div><p>영상으로 브랜드를 더 선명하게.</p></div><div><p>경기도 광주시 초월읍 장담길 21-48</p><p>유튜브 · 쇼츠 · 기업 홍보영상 · 촬영 · 편집</p></div></div></footer>
+</body></html>
