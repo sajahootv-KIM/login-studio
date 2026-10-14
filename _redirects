@@ -1,6 +1,3 @@
 # Netlify 기본 주소로 들어온 방문자와 검색로봇을 대표 주소로 보냄 (중복 페이지 방지)
 https://aesthetic-cendol-4e62bb.netlify.app/*  https://loginstudio.co.kr/:splat  301!
 
-# 무료 사진(Unsplash)을 홈페이지 주소로 대신 받아서 보여줌 (외부 사진 차단 환경에서도 표시되도록)
-/image/brand-building.jpg  https://images.unsplash.com/photo-1602150137620-510810591dff?auto=format&fit=crop&w=900&h=675&q=70&fm=jpg  200!
-/image/event-seminar.jpg   https://images.unsplash.com/photo-1790725673687-e1641269f06c?auto=format&fit=crop&w=900&h=675&q=70&fm=jpg  200!
