@@ -1,0 +1,22 @@
+name: fetch-photos
+on:
+  push:
+    branches: [fetch-photos]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: download
+        run: |
+          mkdir -p dl
+          for id in 1510511233900-1982d92bd835 1568732626545-b9208b767347 1590377800256-5de17549a63c 1551712744-1963ba88d303 1531058020387-3be344556be6 1561314105-e6ac04c2984a 1523580494863-6f3031224c94 1790725673687-e1641269f06c 1602150137620-510810591dff 1504904126298-3fde501c9b31 1534840641466-b1cdb8fb155e; do
+            curl -sSL -o "dl/$id.jpg" "https://images.unsplash.com/photo-$id?auto=format&fm=jpg&w=1600&q=80" -w "$id %{http_code} %{size_download}\n" || true
+          done
+          ls -la dl
+      - name: commit
+        run: |
+          git config user.name "photo-fetch"; git config user.email "actions@github.com"
+          git add dl; git commit -m "downloaded photos" && git push
