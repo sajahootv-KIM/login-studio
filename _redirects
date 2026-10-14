@@ -1,0 +1,2 @@
+# Netlify 기본 주소로 들어온 방문자와 검색로봇을 대표 주소로 보냄 (중복 페이지 방지)
+https://aesthetic-cendol-4e62bb.netlify.app/*  https://loginstudio.co.kr/:splat  301!
