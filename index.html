@@ -155,6 +155,14 @@
     },
     {
      "@type": "Question",
+     "name": "출장 촬영도 가능한가요?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "네, 모든 촬영은 출장도 가능합니다. 스튜디오뿐 아니라 원하시는 장소로 가서 촬영합니다. 장소와 일정을 문자나 카톡으로 알려 주세요."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "어떤 영상을 만들 수 있나요?",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -284,7 +292,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
 .hero h1 em{font-style:normal;color:var(--yellow)}
 .hero-lede{margin:22px 0 0;max-width:30em;font-size:clamp(16px,1.5vw,19px);color:#DDD8C8}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);margin:0;padding:0;list-style:none;border-top:1px solid var(--line);margin-top:28px}
+.facts{display:grid;grid-template-columns:repeat(5,1fr);margin:0;padding:0;list-style:none;border-top:1px solid var(--line);margin-top:28px}
 .facts li{padding:22px 24px 4px 0;display:flex;flex-direction:column;gap:2px}
 .facts li+li{padding-left:24px;border-left:1px solid var(--line)}
 .facts b{font-family:var(--display);font-size:clamp(22px,2.4vw,30px);font-weight:900;letter-spacing:-.03em}
@@ -435,7 +443,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
   .frame::after{background:linear-gradient(0deg,rgba(10,9,8,.95) 0,rgba(10,9,8,.65) 55%,rgba(10,9,8,.3) 100%)}
   .osd-r{display:none}
   .facts{grid-template-columns:repeat(2,1fr)}
-  .facts li:nth-child(3){padding-left:0;border-left:0}
+  .facts li:nth-child(3),.facts li:nth-child(5){padding-left:0;border-left:0}
   .sec-head,.faq,.contact{grid-template-columns:1fr}
   .sec-head .lead{justify-self:start}
   .plans{grid-template-columns:1fr}
@@ -528,7 +536,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
       <div class="hero-body">
         <p class="eyebrow hero-kw">경기 광주 영상촬영 · 홍보영상 · 유튜브 라이브 · 행사 음향 스튜디오</p>
         <h1>기획부터 업로드까지,<br><em>로그인스튜디오에서</em> 끝냅니다.</h1>
-        <p class="hero-lede">경기도 광주의 단독 건물 스튜디오에서 영상촬영, 홍보영상, AI영상 제작, 유튜브 라이브와 채널 운영, 외부 행사 음향까지 한 팀이 맡습니다.</p>
+        <p class="hero-lede">경기도 광주의 단독 건물 스튜디오에서 영상촬영, 홍보영상, AI영상 제작, 유튜브 라이브와 채널 운영, 외부 행사 음향까지 한 팀이 맡습니다. 모든 촬영은 출장도 가능합니다.</p>
         <div class="hero-cta">
           <a class="btn btn-y" href="#quote">프로젝트 문의하기</a>
           <a class="btn btn-o" href="#studio">스튜디오 둘러보기</a>
@@ -540,6 +548,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
       <li><b>주차 <span>10</span>대+</b><small>차량 방문도 편하게</small></li>
       <li><b>원스톱</b><small>기획 · 촬영 · 편집 · 운영</small></li>
       <li><b>수정 <span>2</span>회</b><small>무료로 반영</small></li>
+      <li><b><span>출장</span> 촬영</b><small>모든 촬영 출장 가능</small></li>
     </ul>
   </div>
 </header>
@@ -556,7 +565,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
     <ul class="svc">
       <li class="card">
         <div class="card-img"><img src="image/svc-film.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="스튜디오 영상촬영 현장과 편집 타임라인"></div>
-        <div class="card-body"><span class="tag">FILM</span><h3>영상촬영 · 편집</h3><p>스튜디오와 현장 어디서든 촬영합니다. 촬영만, 편집만 필요하셔도 되고 자막, 음악, 색보정까지 마무리합니다.</p></div>
+        <div class="card-body"><span class="tag">FILM</span><h3>영상촬영 · 편집</h3><p>모든 촬영이 출장 가능해서, 스튜디오와 현장 어디서든 촬영합니다. 촬영만, 편집만 필요하셔도 되고 자막, 음악, 색보정까지 마무리합니다.</p></div>
       </li>
       <li class="card">
         <div class="card-img"><!-- 사진: Gary Ellis, Unsplash 무료 라이선스 (https://unsplash.com/photos/ebX48-W5fMU) -->
@@ -655,6 +664,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
     </div>
     <div class="qa">
       <details open><summary>스튜디오는 어디에 있나요?</summary><p>경기도 광주시 초월읍 장담길 21-48에 있는 30평 단독 건물 스튜디오입니다. 10대 이상 주차할 수 있어 차량으로 편하게 오실 수 있습니다.</p></details>
+      <details><summary>출장 촬영도 가능한가요?</summary><p>네, 모든 촬영은 출장도 가능합니다. 스튜디오뿐 아니라 원하시는 장소로 가서 촬영합니다. 장소와 일정을 문자나 카톡으로 알려 주세요.</p></details>
       <details><summary>어떤 영상을 만들 수 있나요?</summary><p>영상촬영과 편집, 기업·제품 홍보영상, AI영상 제작, 유튜브 채널 운영 대행, 쇼츠(세로형 숏폼), 유튜브 라이브 송출을 맡습니다. 외부 행사 현장의 음향 장비 세팅과 운영도 맡습니다.</p></details>
       <details><summary>비용은 얼마인가요?</summary><p>영상 종류와 분량, 일정에 따라 견적을 드립니다. 원하시는 영상을 문자나 카톡으로 보내 주시면 확인 후 안내해 드립니다.</p></details>
       <details><summary>수정은 몇 번까지 되나요?</summary><p>2회까지 무료로 반영합니다. 기획이 바뀌는 수정은 회당 5만 원이 추가됩니다.</p></details>
