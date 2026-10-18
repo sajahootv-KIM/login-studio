@@ -345,7 +345,18 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
 .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0;padding:0;list-style:none}
 .card{position:relative;display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:var(--bg-3);border:1px solid var(--line);transition:transform .25s,border-color .25s}
 .card:hover{transform:translateY(-4px);border-color:rgba(255,225,77,.5)}
-.card-wide{grid-column:1/-1;flex-direction:row}.card-wide .card-img{aspect-ratio:auto;width:52%;flex:none}.card-wide .card-body{justify-content:center;padding:32px}.card-wide h3{font-size:30px}
+.card-wide{grid-column:1/-1;flex-direction:row}.card-wide .card-img{width:52%;flex:none}.card-wide .card-body{justify-content:center;padding:32px}.card-wide h3{font-size:30px}
+.card-wide .card-img{position:relative;aspect-ratio:16/10}.card-wide:hover .card-img>img{transform:none}
+.aiv{position:absolute;left:21.56%;top:20.5%;width:56.875%;height:50%;display:block;border-radius:10px;overflow:hidden;background:#000}
+.aiv>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:none}
+.card:hover .aiv>img{transform:none}
+.aiv:after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.35),transparent 30%,transparent 70%,rgba(0,0,0,.35))}
+.aiv-play{position:absolute;z-index:1;left:50%;top:50%;width:13%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:#FFE14D;transition:transform .2s}
+.aiv-play:before{content:"";position:absolute;inset:28% 24% 28% 36%;background:#111;clip-path:polygon(0 0,0 100%,100% 50%)}
+.aiv:hover .aiv-play{transform:translate(-50%,-50%) scale(1.1)}
+.aiv-rec{position:absolute;z-index:1;left:4%;top:6%;display:flex;align-items:center;gap:6px;font:700 clamp(10px,1.3vw,14px)/1 var(--mono,sans-serif);color:#fff}
+.aiv-rec i{width:8px;height:8px;border-radius:50%;background:#E8362D}
+.aiv-ai{position:absolute;z-index:1;right:4%;bottom:7%;background:#FFE14D;color:#111;font:800 clamp(11px,1.5vw,16px)/1 sans-serif;padding:.45em .8em;border-radius:7px}
 .card-img{aspect-ratio:4/3;overflow:hidden;max-width:100%}
 .card-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.9);transition:transform .6s}
 .card:hover .card-img img{transform:scale(1.05)}
@@ -452,7 +463,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
 /* responsive */
 @media (max-width:1000px){
   .svc{grid-template-columns:repeat(2,1fr)}
-  .card-wide{flex-direction:column}.card-wide .card-img{width:100%;aspect-ratio:16/9}
+  .card-wide{flex-direction:column}.card-wide .card-img{width:100%}
   .gear{grid-template-columns:repeat(3,1fr);row-gap:20px}
   .gear li:nth-child(4){padding-left:0;border-left:0}
   .steps{grid-template-columns:1fr;gap:28px}
@@ -616,7 +627,11 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
         <div class="card-body"><span class="tag">9:16</span><h3>쇼츠 제작</h3><p>첫 2초에 시선을 잡는 세로형 영상을 기획하고 빠르게 제작합니다.</p></div>
       </li>
       <li class="card card-wide">
-        <div class="card-img"><img src="image/ai-video.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="AI영상 제작 이미지, 영상 편집 화면과 타임라인"></div>
+        <div class="card-img"><img src="image/ai-video.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="AI영상 제작 이미지, 영상 편집 화면과 타임라인">
+          <a class="aiv" href="https://youtu.be/OVx_rrvvass" target="_blank" rel="noopener" aria-label="AI영상 샘플 유튜브에서 보기">
+            <img src="https://i.ytimg.com/vi/OVx_rrvvass/maxresdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/OVx_rrvvass/hqdefault.jpg'}">
+            <span class="aiv-rec"><i></i>REC</span><span class="aiv-play" aria-hidden="true"></span><span class="aiv-ai">AI</span>
+          </a></div>
         <div class="card-body"><span class="tag">AI VIDEO</span><h3>AI영상 제작</h3><p>AI로 만든 영상과 이미지로 홍보영상, 채널 콘텐츠, 뮤직·배경 영상을 제작합니다. 촬영이 어려운 장면도 AI로 구현하고, 실제 촬영 영상과 섞어 완성할 수도 있습니다.</p><a class="ask" href="#quote">요금 문의 →</a></div>
       </li>
     </ul>
