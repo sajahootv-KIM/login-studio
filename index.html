@@ -53,7 +53,6 @@
    "description": "경기도 광주시 초월읍 30평 단독 건물 스튜디오. 영상촬영, 기업 홍보영상, 유튜브 채널 운영 대행, 쇼츠 제작, 유튜브 라이브, 외부 행사 음향.",
    "telephone": ["+82-10-8280-9255", "+82-10-5897-9982"],
    "email": "audiogod@naver.com",
-   "priceRange": "₩1,500,000~",
    "address": {
     "@type": "PostalAddress",
     "streetAddress": "초월읍 장담길 21-48",
@@ -75,49 +74,6 @@
    "sameAs": [
     "https://www.youtube.com/channel/UChjmDy8WQUSmywCqmjcuiFw"
    ],
-   "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "유튜브 채널 운영 요금제",
-    "itemListElement": [
-     {
-      "@type": "Offer",
-      "name": "STANDARD (월 2편)",
-      "price": "1500000",
-      "priceCurrency": "KRW",
-      "itemOffered": {
-       "@type": "Service",
-       "name": "유튜브 채널 운영 대행 월 2편"
-      }
-     },
-     {
-      "@type": "Offer",
-      "name": "DELUXE (월 4편 · 멀티캠 · 전담 PD)",
-      "priceSpecification": {
-       "@type": "PriceSpecification",
-       "minPrice": "2800000",
-       "maxPrice": "3200000",
-       "priceCurrency": "KRW"
-      },
-      "itemOffered": {
-       "@type": "Service",
-       "name": "유튜브 채널 운영 대행 월 4편"
-      }
-     },
-     {
-      "@type": "Offer",
-      "name": "PREMIUM (맞춤 견적)",
-      "priceSpecification": {
-       "@type": "PriceSpecification",
-       "minPrice": "5000000",
-       "priceCurrency": "KRW"
-      },
-      "itemOffered": {
-       "@type": "Service",
-       "name": "유튜브 채널 맞춤 운영"
-      }
-     }
-    ]
-   },
    "makesOffer": [
     {
      "@type": "Offer",
@@ -207,10 +163,10 @@
     },
     {
      "@type": "Question",
-     "name": "유튜브 대행 비용은 얼마인가요?",
+     "name": "비용은 얼마인가요?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "월 2편 STANDARD 150만 원, 월 4편 DELUXE 280~320만 원, 맞춤형 PREMIUM 500만 원부터입니다. 단건 촬영, 홍보영상, 유튜브 라이브, 외부 행사 음향은 내용에 따라 견적을 드리니 문의해 주세요."
+      "text": "영상 종류와 분량, 일정에 따라 견적을 드립니다. 원하시는 영상을 문자나 카톡으로 보내 주시면 확인 후 안내해 드립니다."
      }
     },
     {
@@ -254,7 +210,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
 <style>
-/* Layout: 카메라 뷰파인더 히어로 → 서비스 카드 → 스튜디오 갤러리 → 채널 띠 → 요금제 → 진행 → FAQ → 문의.
+/* Layout: 카메라 뷰파인더 히어로 → 서비스 카드 → 스튜디오 갤러리 → 채널 띠 → 진행 → FAQ → 문의.
    단일 다크 룩(촬영장 암전 톤) + 브랜드 옐로우는 포인트에만. */
 :root{
   --bg:#121110;          /* 암전된 스튜디오 */
@@ -541,7 +497,6 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
     <div class="menu">
       <a href="#services">서비스</a>
       <a href="#studio">스튜디오</a>
-      <a href="#pricing">요금제</a>
       <a href="#process">진행 과정</a>
       <a href="#faq">FAQ</a>
     </div>
@@ -555,7 +510,6 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
   <div class="mnav" id="mnav" hidden>
     <a href="#services">서비스</a>
     <a href="#studio">스튜디오</a>
-    <a href="#pricing">요금제</a>
     <a href="#process">진행 과정</a>
     <a href="#faq">자주 묻는 질문</a>
     <a href="#quote">견적 문의 · 오시는 길</a>
@@ -675,39 +629,6 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
   </div>
 </section>
 
-<section id="pricing" class="sec sec-2">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <p class="eyebrow">Pricing</p>
-        <h2 class="h2">월 단위로<br>맡기세요.</h2>
-      </div>
-      <p class="lead">유튜브 채널 운영 기준 월 요금입니다. 단건 촬영, 홍보영상, 유튜브 라이브, 외부 행사 음향은 내용에 따라 견적을 드리니 문의해 주세요.</p>
-    </div>
-    <div class="plans">
-      <article class="plan">
-        <div class="plan-top"><span class="plan-name">STANDARD</span></div>
-        <div class="price">150<small>만 원 / 월</small></div>
-        <ul><li>월 2편 제작</li><li>기획 · 촬영 · 편집 포함</li><li>썸네일 · 업로드 대행</li></ul>
-        <a class="btn" href="#quote">상담 신청</a>
-      </article>
-      <article class="plan pick">
-        <div class="plan-top"><span class="plan-name">DELUXE</span><span class="badge">추천</span></div>
-        <div class="price">280~320<small>만 원 / 월</small></div>
-        <ul><li>월 4편 제작</li><li>멀티캠 촬영</li><li>전담 PD 배정</li></ul>
-        <a class="btn" href="#quote">상담 신청</a>
-      </article>
-      <article class="plan">
-        <div class="plan-top"><span class="plan-name">PREMIUM</span></div>
-        <div class="price">500<small>만 원~ / 월</small></div>
-        <ul><li>제작 편수 · 구성 맞춤</li><li>브랜딩 · 라이브 포함 가능</li><li>맞춤 견적</li></ul>
-        <a class="btn" href="#quote">견적 요청</a>
-      </article>
-    </div>
-    <p class="note">촬영 4시간 초과 시 시간당 5만 원</p>
-  </div>
-</section>
-
 <section id="process" class="sec">
   <div class="wrap">
     <div class="sec-head">
@@ -735,7 +656,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
     <div class="qa">
       <details open><summary>스튜디오는 어디에 있나요?</summary><p>경기도 광주시 초월읍 장담길 21-48에 있는 30평 단독 건물 스튜디오입니다. 10대 이상 주차할 수 있어 차량으로 편하게 오실 수 있습니다.</p></details>
       <details><summary>어떤 영상을 만들 수 있나요?</summary><p>영상촬영과 편집, 기업·제품 홍보영상, AI영상 제작, 유튜브 채널 운영 대행, 쇼츠(세로형 숏폼), 유튜브 라이브 송출을 맡습니다. 외부 행사 현장의 음향 장비 세팅과 운영도 맡습니다.</p></details>
-      <details><summary>유튜브 대행 비용은 얼마인가요?</summary><p>월 2편 STANDARD 150만 원, 월 4편 DELUXE 280~320만 원, 맞춤형 PREMIUM 500만 원부터입니다. 단건 촬영, 홍보영상, 유튜브 라이브, 외부 행사 음향은 내용에 따라 견적을 드리니 문의해 주세요.</p></details>
+      <details><summary>비용은 얼마인가요?</summary><p>영상 종류와 분량, 일정에 따라 견적을 드립니다. 원하시는 영상을 문자나 카톡으로 보내 주시면 확인 후 안내해 드립니다.</p></details>
       <details><summary>수정은 몇 번까지 되나요?</summary><p>2회까지 무료로 반영합니다. 기획이 바뀌는 수정은 회당 5만 원이 추가됩니다.</p></details>
       <details><summary>촬영 시간이 길어지면 어떻게 되나요?</summary><p>기본 4시간이며, 초과하면 시간당 5만 원이 추가됩니다.</p></details>
       <details><summary>완성된 영상의 권리는 누구에게 있나요?</summary><p>완성본은 고객님께 귀속됩니다. 촬영 원본 파일은 스튜디오 자산으로 보관합니다.</p></details>
