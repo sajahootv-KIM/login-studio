@@ -484,7 +484,6 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
   .svc{grid-template-columns:1fr}
   .gear{grid-template-columns:1fr 1fr}
   .gear li{padding-left:0!important;border-left:0!important}
-  .form-grid{grid-template-columns:1fr}
   .step{grid-template-columns:1fr}
   .step-bar,.step h3,.step p{grid-column:1;grid-row:auto}
 }
@@ -498,19 +497,26 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
 @media (max-width:860px){.burger{display:grid}}
 @media (min-width:861px){.mnav{display:none!important}}
 
-/* map + consent + misc */
+/* map + misc */
 .map-btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .map-btns a{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);font-size:13.5px;font-weight:600;color:var(--fg)}
 .map-btns a:hover{border-color:var(--yellow);color:var(--yellow)}
 .map-btns i{width:8px;height:8px;border-radius:50%;background:var(--c)}
-.consent{margin-top:20px;padding:16px 18px;border-radius:12px;background:var(--bg);border:1px solid var(--line);font-size:14px;color:var(--fg-2);line-height:1.6}
-.consent label{display:flex;gap:10px;align-items:flex-start;color:var(--fg);font-weight:700;font-size:15px;cursor:pointer}
-.consent input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--yellow);flex:0 0 auto}
-.consent ul{margin:10px 0 0;padding-left:18px}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.sent.err{color:#FF8A80}
-.btn[disabled]{opacity:.6;cursor:progress}
 .foot .biz{margin-top:14px;font-size:13px}
+/* kakao channel card */
+.kakao{background:var(--bg-2);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;gap:14px;min-width:0}
+.kakao-kicker{margin:0;font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--yellow)}
+.kakao h3{font-size:clamp(24px,2.8vw,32px);font-weight:900;line-height:1.3}
+.kakao-sub{margin:0;color:var(--fg-2)}
+.kakao-list{margin:6px 0 10px;padding:18px 0 0;list-style:none;display:grid;gap:10px;border-top:1px solid var(--line)}
+.kakao-list li{display:flex;gap:10px;font-size:15.5px;line-height:1.55}
+.kakao-list li::before{content:"";flex:0 0 auto;width:16px;height:16px;margin-top:4px;border-radius:50%;background:var(--yellow);box-shadow:inset 0 0 0 4px var(--bg-2)}
+.kakao-btn{background:#FEE500;color:#191600;min-height:60px;font-size:18px;gap:12px}
+.kakao-btn:hover{transform:translateY(-2px);background:#FFEF4D}
+.kakao-btn svg{width:26px;height:26px}
+.kakao-or{margin:10px 0 0;text-align:center;font-size:14px;color:var(--fg-2)}
+.kakao-tels{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.kakao-tels{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -721,7 +727,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
     <div>
       <p class="eyebrow">Contact</p>
       <h2 class="h2">어떤 영상이<br>필요하세요?</h2>
-      <p class="lead">영상촬영, 홍보영상, 유튜브 라이브, 외부 행사 음향, 유튜브 대행 견적을 상담해 드립니다. 내용을 남겨주시면 확인 후 연락드리고, 급하시면 전화 주세요.</p>
+      <p class="lead">영상촬영, 홍보영상, 유튜브 라이브, 외부 행사 음향, 유튜브 대행 견적을 상담해 드립니다. 카카오톡 채널로 문의해 주시면 확인 후 답변드리고, 급하시면 전화 주세요.</p>
       <dl class="info">
         <div><dt>TEL</dt><dd><a href="tel:01082809255">010-8280-9255</a><small><a href="tel:01058979982">010-5897-9982</a></small></dd></div>
         <div><dt>EMAIL</dt><dd><a href="mailto:audiogod@naver.com">audiogod@naver.com</a></dd></div>
@@ -732,29 +738,26 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
           </span></dd></div>
       </dl>
     </div>
-    <form class="form" id="qform" name="quote" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="quote">
-      <p class="hp"><label>비워두세요 <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-      <div class="form-grid">
-        <div class="field"><label for="f-name">이름 / 회사명</label><input id="f-name" name="name" required autocomplete="name" placeholder="홍길동 / 회사명"></div>
-        <div class="field"><label for="f-tel">연락처</label><input id="f-tel" name="tel" type="tel" inputmode="tel" required autocomplete="tel" placeholder="010-0000-0000"></div>
-        <div class="field"><label for="f-mail">이메일</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="example@email.com"></div>
-        <div class="field"><label for="f-type">제작 유형</label><select id="f-type" name="type"><option value="">선택해주세요</option><option>유튜브 대행 (월 운영)</option><option>쇼츠 제작</option><option>영상촬영 · 편집</option><option>기업 홍보영상</option><option>유튜브 라이브</option><option>외부 행사 음향</option><option>기타</option></select></div>
-        <div class="field full"><label for="f-budget">예상 예산</label><input id="f-budget" name="budget" placeholder="예: 월 150만 원 / 협의"></div>
-        <div class="field full"><label for="f-msg">프로젝트 내용</label><textarea id="f-msg" name="message" placeholder="원하시는 영상, 일정, 참고 영상 링크 등을 자유롭게 적어주세요."></textarea></div>
+    <div class="kakao">
+      <p class="kakao-kicker">KAKAOTALK CHANNEL</p>
+      <h3>카카오톡으로 편하게 문의하세요</h3>
+      <p class="kakao-sub">채팅창에 아래 내용만 남겨주시면 확인 후 답변드립니다.</p>
+      <ul class="kakao-list">
+        <li>만들고 싶은 영상 종류 (영상촬영, 홍보영상, 유튜브 라이브, 행사 음향 등)</li>
+        <li>희망 일정과 장소</li>
+        <li>대략의 예산 (협의 가능)</li>
+        <li>참고하고 싶은 영상 링크</li>
+      </ul>
+      <a class="btn kakao-btn" href="#KAKAO_LINK" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.8 5.3 4.6 6.7l-1 3.6c-.1.3.3.6.6.4l4.2-2.8c.5.1 1 .1 1.6.1 5.5 0 10-3.6 10-8S17.5 3 12 3z" fill="currentColor"/></svg>
+        카카오톡 채널로 상담하기
+      </a>
+      <p class="kakao-or">급하시면 전화로 연락주세요</p>
+      <div class="kakao-tels">
+        <a class="btn btn-o" href="tel:01082809255">010-8280-9255</a>
+        <a class="btn btn-o" href="tel:01058979982">010-5897-9982</a>
       </div>
-      <div class="consent">
-        <label for="f-agree"><input id="f-agree" name="privacy-agree" type="checkbox" value="동의함" required>개인정보 수집 · 이용에 동의합니다 (필수)</label>
-        <ul>
-          <li>수집 항목: 이름(회사명), 연락처, 이메일, 문의 내용</li>
-          <li>이용 목적: 견적 상담 및 회신</li>
-          <li>보유 기간: 상담 완료 후 1년 보관 뒤 파기</li>
-        </ul>
-        동의하지 않으실 수 있으며, 이 경우 온라인 문의 대신 전화로 상담해 주세요.
-      </div>
-      <button class="btn btn-y" type="submit" id="qsubmit">견적 문의 보내기</button>
-      <p class="sent" id="sent" role="status" hidden></p>
-    </form>
+    </div>
   </div>
 </section>
 
@@ -790,20 +793,6 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
   function setMenu(open){mnav.hidden=!open;burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');}
   burger.addEventListener('click',function(){setMenu(mnav.hidden);});
   mnav.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false);});
-
-  // 견적 문의 (Netlify Forms)
-  var form=document.getElementById('qform'),sent=document.getElementById('sent'),btn=document.getElementById('qsubmit');
-  function say(msg,err){sent.textContent=msg;sent.classList.toggle('err',!!err);sent.hidden=false;}
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!form.checkValidity()){form.reportValidity();return;}
-    btn.disabled=true;btn.textContent='보내는 중…';
-    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
-      .then(function(r){if(!r.ok)throw new Error(r.status);
-        form.reset();say('문의가 접수되었습니다. 확인 후 연락드리겠습니다.');})
-      .catch(function(){say('전송에 실패했습니다. 잠시 후 다시 시도하시거나 010-8280-9255 또는 010-5897-9982로 전화 주세요.',true);})
-      .then(function(){btn.disabled=false;btn.textContent='견적 문의 보내기';});
-  });
 })();
 </script>
 </body>
