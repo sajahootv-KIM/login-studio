@@ -505,6 +505,10 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
 @media (prefers-reduced-motion:no-preference){.kids-float{animation:kfloat 5s ease-in-out infinite}}
 @keyframes kfloat{50%{transform:translateY(-6px)}}
 @media (max-width:1000px){.card-kids{flex-direction:column}}
+.nav-kids{display:inline-flex;align-items:center;gap:6px}
+.nav-kids span{font-size:17px;line-height:1}
+@media (prefers-reduced-motion:no-preference){.nav-kids:hover span{animation:wig .5s ease-in-out}}
+@keyframes wig{25%{transform:rotate(-14deg)}75%{transform:rotate(14deg)}}
 </style>
 </head>
 <body>
@@ -517,7 +521,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
       <a href="#studio">스튜디오</a>
       <a href="#process">진행 과정</a>
       <a href="#faq">FAQ</a>
-      <a href="/kids/">키즈 AI영상</a>
+      <a class="nav-kids" href="/kids/"><span aria-hidden="true">🧸</span>키즈 AI영상</a>
     </div>
     <div class="nav-r">
       <a class="btn btn-y" href="#quote">견적 문의</a>
@@ -531,7 +535,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
     <a href="#studio">스튜디오</a>
     <a href="#process">진행 과정</a>
     <a href="#faq">자주 묻는 질문</a>
-    <a href="/kids/">키즈 AI영상 (아이 맞춤 영상)</a>
+    <a href="/kids/"><span aria-hidden="true">🧸</span> 키즈 AI영상 (아이 맞춤 영상)</a>
     <a href="#quote">견적 문의 · 오시는 길</a>
   </div>
 </nav>
