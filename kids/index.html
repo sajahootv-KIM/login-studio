@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>우리 아이 AI 맞춤 영상 | 로그인스튜디오 키즈</title>
+<meta name="description" content="아이 사진으로 만드는 AI 동화 영상·축하 영상·그림책 영상. 어린이집·유치원 행사 영상과 생활교육 영상까지. 원본 사진은 납품 후 바로 삭제합니다. 경기 광주 로그인스튜디오.">
+<meta name="keywords" content="AI 아이 영상, 아이 맞춤 동화 영상, 돌 영상, 생일 축하 영상, 성장 영상, AI 동화, 어린이집 행사 영상, 유치원 영상, 생활교육 영상, 로그인스튜디오">
+<meta name="theme-color" content="#FFF8E8">
+<link rel="canonical" href="https://loginstudio.co.kr/kids/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="로그인스튜디오">
+<meta property="og:title" content="우리 아이가 주인공이 되는 AI 영상 | 로그인스튜디오 키즈">
+<meta property="og:description" content="아이 사진 몇 장으로 동화 속 주인공 영상을. 원본 사진은 납품 후 바로 삭제합니다.">
+<meta property="og:url" content="https://loginstudio.co.kr/kids/">
+<meta property="og:image" content="https://loginstudio.co.kr/image/og.jpg">
+<meta property="og:locale" content="ko_KR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800;900&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* 로그인스튜디오 키즈: 본 사이트와 같은 폰트·로고·옐로우, 부모 대상이라 밝은 크림 톤 */
+:root{
+  --bg:#FFF8E8; --bg-2:#FFF1CF; --card:#FFFFFF;
+  --fg:#1E1C17; --fg-2:#5E594C;
+  --line:rgba(30,28,23,.12);
+  --yellow:#FFE14D; --on-yellow:#16150F;
+  --coral:#FF8A73; --mint:#7ED3B6; --sky:#8CC4FF; --rec:#FF3B30;
+  --display:"Gothic A1","Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --body:"IBM Plex Sans KR","Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:84px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--fg);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.035em}
+.eyebrow{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);display:inline-flex;align-items:center;gap:10px;background:var(--yellow);padding:4px 12px;border-radius:999px}
+.h2{font-size:clamp(30px,4.4vw,52px);font-weight:900;line-height:1.18;margin-top:18px}
+.lead{color:var(--fg-2);max-width:36em;margin:16px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font:inherit;font-weight:700;font-size:16px;border:1.5px solid transparent;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-d{background:var(--fg);color:#fff}
+.btn-y{background:var(--yellow);color:var(--on-yellow)}
+.btn-o{border-color:rgba(30,28,23,.3)}
+.btn-o:hover{background:rgba(30,28,23,.05)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(255,248,232,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:900;font-size:19px;letter-spacing:-.03em;white-space:nowrap}
+.logo-mark{width:30px;height:21px;border-radius:6px;background:var(--rec);display:grid;place-items:center}
+.logo-mark::after{content:"";border-left:8px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent;margin-left:2px}
+.logo small{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;background:var(--yellow);padding:2px 8px;border-radius:999px}
+.menu{display:flex;gap:28px;font-size:15px;font-weight:600;color:var(--fg-2)}
+.menu a:hover{color:var(--fg)}
+.nav .btn{min-height:42px;padding:0 20px;font-size:15px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:clamp(56px,8vw,112px) clamp(64px,8vw,104px)}
+.hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(36px,6vw,74px);font-weight:900;line-height:1.1}
+.hero h1 mark{background:linear-gradient(transparent 58%,var(--yellow) 58%);color:inherit;padding:0 .08em}
+.hero-lede{margin:22px 0 0;max-width:28em;font-size:clamp(16px,1.6vw,19px);color:var(--fg-2)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.promise{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 0;padding:0;list-style:none}
+.promise li{font-size:14px;font-weight:600;padding:6px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
+.promise li b{color:#D9480F}
+
+/* 히어로 그림: 그림책 프레임 속 주인공 (직접 그린 장식) */
+.book{position:relative;aspect-ratio:4/4.4;max-width:460px;justify-self:center;width:100%}
+.page{position:absolute;inset:0;border-radius:28px;background:var(--card);border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(80,60,10,.35)}
+.page.back{transform:rotate(-6deg) translate(-4%,2%);background:var(--mint)}
+.page.mid{transform:rotate(4deg) translate(3%,1%);background:var(--sky)}
+.page.front{display:flex;flex-direction:column;overflow:hidden}
+.scene{flex:1;position:relative;background:linear-gradient(#BFE3FF,#FFF1CF 78%)}
+.scene svg{position:absolute;inset:0;width:100%;height:100%}
+.caption{padding:18px 22px 22px;border-top:1px solid var(--line)}
+.caption small{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--fg-2)}
+.caption p{margin:2px 0 0;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em}
+.caption p span{background:var(--yellow);padding:0 6px;border-radius:6px}
+.rec{position:absolute;top:16px;left:16px;z-index:2;display:flex;align-items:center;gap:6px;font:700 12px/1 var(--mono);color:#fff;background:rgba(0,0,0,.45);padding:6px 10px;border-radius:999px}
+.rec i{width:8px;height:8px;border-radius:50%;background:var(--rec)}
+@media (prefers-reduced-motion:no-preference){
+  .rec i{animation:blink 1.4s steps(1,end) infinite}
+  .float{animation:float 5s ease-in-out infinite}
+}
+@keyframes blink{50%{opacity:.2}}
+@keyframes float{50%{transform:translateY(-8px)}}
+
+/* sections */
+.sec{padding-block:clamp(72px,9vw,120px)}
+.sec-2{background:var(--bg-2)}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;margin-bottom:clamp(36px,5vw,56px)}
+.sec-head .lead{margin:0;justify-self:end}
+
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+.plan{position:relative;display:flex;flex-direction:column;gap:16px;padding:30px 26px;border-radius:24px;background:var(--card);border:1px solid var(--line)}
+.plan.pick{background:var(--fg);color:#fff;border-color:var(--fg)}
+.plan-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.plan-ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:var(--c,var(--yellow))}
+.badge{font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--yellow);color:var(--on-yellow)}
+.plan h3{font-size:24px;font-weight:800}
+.plan .desc{margin:-6px 0 0;font-size:15px;color:var(--fg-2)}
+.plan.pick .desc{color:#CFCABB}
+.price{font-family:var(--display);font-weight:900;font-size:clamp(32px,3.2vw,40px);letter-spacing:-.04em;line-height:1.1;font-variant-numeric:tabular-nums}
+.price small{font-family:var(--body);font-size:15px;font-weight:600;letter-spacing:0;opacity:.65;margin-left:4px}
+.plan ul{margin:0;padding:18px 0 0;list-style:none;display:grid;gap:9px;border-top:1px solid var(--line);flex:1}
+.plan.pick ul{border-color:rgba(255,255,255,.18)}
+.plan li{display:flex;gap:10px;font-size:15.5px;line-height:1.55}
+.plan li::before{content:"";flex:0 0 auto;width:16px;height:16px;margin-top:4px;border-radius:50%;background:var(--yellow);box-shadow:inset 0 0 0 4px var(--card)}
+.plan.pick li::before{box-shadow:inset 0 0 0 4px var(--fg)}
+.plan .btn{width:100%}
+.plan.pick .btn{background:var(--yellow);color:var(--on-yellow)}
+.plan:not(.pick) .btn{border-color:rgba(30,28,23,.25)}
+.note{margin:18px 0 0;font-size:14px;color:var(--fg-2)}
+
+/* options table */
+.opts{margin-top:clamp(40px,5vw,56px);display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,5vw,64px);align-items:start}
+.opts h3{font-size:26px;font-weight:800}
+.opt-tbl{width:100%;border-collapse:collapse;font-size:15.5px;background:var(--card);border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.opt-tbl th,.opt-tbl td{padding:15px 20px;text-align:left;border-bottom:1px solid var(--line)}
+.opt-tbl tr:last-child td{border-bottom:0}
+.opt-tbl td:last-child{text-align:right;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.opt-tbl th{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--fg-2);background:var(--bg-2)}
+.opt-tbl th:last-child{text-align:right}
+
+/* B2B */
+.biz{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0;padding:0;list-style:none}
+.biz li{display:flex;flex-direction:column;gap:10px;padding:28px 26px;border-radius:24px;background:var(--card);border:1px solid var(--line)}
+.biz .tag{align-self:flex-start;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--fg-2)}
+.biz h3{font-size:23px;font-weight:800}
+.biz p{margin:0;font-size:15.5px;color:var(--fg-2);line-height:1.65}
+.biz .from{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-family:var(--display);font-weight:900;font-size:24px;letter-spacing:-.03em}
+.biz .from small{font-family:var(--body);font-size:14px;font-weight:600;color:var(--fg-2);margin-left:4px;letter-spacing:0}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding:22px 18px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--mono);font-weight:700;font-size:13px;display:inline-block;background:var(--yellow);padding:2px 9px;border-radius:999px}
+.steps h3{font-size:19px;font-weight:800;margin-top:12px}
+.steps p{margin:6px 0 0;font-size:14.5px;color:var(--fg-2);line-height:1.6}
+.steps li.hl{background:var(--fg);color:#fff;border-color:var(--fg)}
+.steps li.hl p{color:#CFCABB}
+
+/* safety */
+.safe{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0;padding:0;list-style:none}
+.safe li{padding:26px 22px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
+.safe .ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--c);font-size:22px}
+.safe h3{font-size:20px;font-weight:800;margin-top:16px}
+.safe p{margin:6px 0 0;font-size:15px;color:var(--fg-2);line-height:1.6}
+.safe-cta{margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:22px 26px;border-radius:22px;background:var(--yellow)}
+.safe-cta p{margin:0;font-weight:600}
+
+/* faq */
+.faq{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px);align-items:start}
+.qa{border-top:1px solid var(--line)}
+.qa details{border-bottom:1px solid var(--line)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font-weight:700;font-size:18px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";font-family:var(--mono);font-size:22px;line-height:1;transition:transform .2s}
+.qa details[open] summary::after{transform:rotate(45deg)}
+.qa p{margin:-6px 0 22px;color:var(--fg-2);max-width:40em}
+
+/* contact */
+.contact{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px);align-items:start}
+.box{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;gap:14px;min-width:0}
+.box h3{font-size:clamp(23px,2.6vw,30px);font-weight:900;line-height:1.3}
+.box h3 .k{background:#FEE500;padding:0 6px;border-radius:6px}
+.box ul{margin:4px 0 8px;padding:16px 0 0;list-style:none;display:grid;gap:9px;border-top:1px solid var(--line)}
+.box li{display:flex;gap:10px;font-size:15.5px;line-height:1.55}
+.box li::before{content:"";flex:0 0 auto;width:16px;height:16px;margin-top:4px;border-radius:50%;background:var(--yellow);box-shadow:inset 0 0 0 4px var(--card)}
+.tels{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.info{margin:32px 0 0}
+.info div{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:16px 0;border-top:1px solid var(--line)}
+.info dt{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:var(--fg-2);padding-top:3px}
+.info dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+.info small{display:block;font-weight:400;color:var(--fg-2);font-size:14px}
+
+/* footer */
+.foot{border-top:1px solid var(--line);padding-block:44px}
+.foot-in{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.foot p{margin:6px 0 0;color:var(--fg-2);font-size:14px}
+.foot-r{text-align:right}
+
+@media (max-width:1000px){
+  .plans,.biz{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .safe{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .menu{display:none}
+  .hero-in,.sec-head,.opts,.faq,.contact{grid-template-columns:1fr}
+  .sec-head .lead{justify-self:start}
+  .book{max-width:380px}
+  .foot-r{text-align:left}
+}
+@media (max-width:600px){
+  .plans,.biz,.safe{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .tels{grid-template-columns:1fr}
+  .logo small{display:none}
+  .hero-cta .btn{flex:1 1 auto}
+  .opt-tbl th,.opt-tbl td{padding:13px 14px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="주 메뉴">
+  <div class="wrap nav-in">
+    <a class="logo" href="/"><span class="logo-mark" aria-hidden="true"></span>로그인스튜디오 <small>KIDS</small></a>
+    <div class="menu">
+      <a href="#family">가족 맞춤</a>
+      <a href="#center">어린이집·유치원</a>
+      <a href="#safety">안심 약속</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn btn-d" href="#contact">제작 문의</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <p class="eyebrow">AI Kids Film</p>
+      <h1 style="margin-top:20px">우리 아이가<br><mark>동화 속 주인공</mark>이<br>되는 순간</h1>
+      <p class="hero-lede">사진 몇 장이면 충분해요. 생일·돌·기념일 축하 영상부터 아이가 주인공인 그림책 영상까지, AI로 만들고 10년 경력의 영상 PD가 한 장면씩 직접 다듬습니다.</p>
+      <div class="hero-cta">
+        <a class="btn btn-d" href="#family">상품·가격 보기</a>
+        <a class="btn btn-o" href="#center">어린이집·유치원 문의</a>
+      </div>
+      <ul class="promise">
+        <li><b>●</b> 원본 사진 납품 후 7일 내 삭제</li>
+        <li><b>●</b> 사람이 모든 장면 검수</li>
+        <li><b>●</b> 보호자 동의서 필수</li>
+      </ul>
+    </div>
+    <div class="book" aria-hidden="true">
+      <div class="page back"></div>
+      <div class="page mid"></div>
+      <div class="page front">
+        <div class="scene">
+          <span class="rec"><i></i>REC</span>
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <circle cx="320" cy="62" r="30" fill="#FFE14D"/>
+            <g fill="#fff" opacity=".95"><ellipse cx="92" cy="70" rx="40" ry="16"/><ellipse cx="120" cy="60" rx="28" ry="18"/><ellipse cx="250" cy="110" rx="34" ry="12"/></g>
+            <path d="M0 238 Q100 196 200 230 T400 222 V300 H0Z" fill="#7ED3B6"/>
+            <path d="M0 262 Q120 236 230 258 T400 254 V300 H0Z" fill="#5BBF9C"/>
+            <g class="float">
+              <path d="M150 190 h100 l-12 34 h-76z" fill="#FF8A73"/>
+              <rect x="196" y="120" width="4" height="72" fill="#1E1C17"/>
+              <path d="M200 122 l44 58 h-44z" fill="#fff"/>
+              <circle cx="178" cy="172" r="15" fill="#FFD9B8"/>
+              <path d="M164 168 q14 -20 28 0" fill="#1E1C17"/>
+              <circle cx="173" cy="174" r="1.8" fill="#1E1C17"/><circle cx="183" cy="174" r="1.8" fill="#1E1C17"/>
+              <path d="M174 180 q4 3 8 0" stroke="#1E1C17" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+              <rect x="166" y="186" width="24" height="10" rx="5" fill="#8CC4FF"/>
+            </g>
+            <g fill="#FFE14D"><path d="M60 140 l4 9 9 1 -7 6 2 9 -8 -5 -8 5 2 -9 -7 -6 9 -1z"/><path d="M330 160 l3 6 6 1 -5 4 1 6 -5 -3 -5 3 1 -6 -5 -4 6 -1z"/></g>
+          </svg>
+        </div>
+        <div class="caption">
+          <small>CHAPTER 01</small>
+          <p><span>하준</span>이의 첫 번째 모험</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="family" class="sec sec-2">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">For Family</p>
+        <h2 class="h2">가족을 위한<br>맞춤 상품</h2>
+      </div>
+      <p class="lead">아이 사진과 이름만 보내 주세요. 시안을 먼저 보여드리고, 1회 무료 수정 후 완성본을 보내드립니다. 표시 금액은 부가세 별도입니다.</p>
+    </div>
+
+    <div class="plans">
+      <article class="plan">
+        <div class="plan-top"><span class="plan-ico" style="--c:var(--mint)">✦</span></div>
+        <h3>첫 만남</h3>
+        <p class="desc">처음 맡겨 보시는 분께 추천하는 입문형</p>
+        <div class="price">39,000<small>원</small></div>
+        <ul>
+          <li>동화풍 AI 이미지 5장</li>
+          <li>15초 움직이는 영상 1개</li>
+          <li>그림체 3종 중 선택</li>
+          <li>제작 기간 3~5일</li>
+        </ul>
+        <a class="btn" href="#contact">이 상품으로 문의</a>
+      </article>
+
+      <article class="plan pick">
+        <div class="plan-top"><span class="plan-ico" style="--c:var(--yellow)">🎂</span><span class="badge">가장 많이 찾아요</span></div>
+        <h3>축하해</h3>
+        <p class="desc">생일·돌·백일·졸업, 기념일 축하 영상</p>
+        <div class="price">129,000<small>원</small></div>
+        <ul>
+          <li>1분 내외 축하 영상</li>
+          <li>아이 이름이 들어간 노래 또는 내레이션</li>
+          <li>오프닝·엔딩 문구 맞춤 제작</li>
+          <li>세로형(쇼츠) 버전 함께 제공</li>
+          <li>제작 기간 5~7일</li>
+        </ul>
+        <a class="btn" href="#contact">이 상품으로 문의</a>
+      </article>
+
+      <article class="plan">
+        <div class="plan-top"><span class="plan-ico" style="--c:var(--coral)">📖</span></div>
+        <h3>그림책</h3>
+        <p class="desc">아이가 주인공인 한 편의 이야기</p>
+        <div class="price">249,000<small>원</small></div>
+        <ul>
+          <li>2~3분 스토리 영상</li>
+          <li>이야기 기획부터 함께 상담</li>
+          <li>성우풍 내레이션 + 배경음악</li>
+          <li>인쇄용 고화질 장면 이미지 10장</li>
+          <li>제작 기간 10~14일</li>
+        </ul>
+        <a class="btn" href="#contact">이 상품으로 문의</a>
+      </article>
+    </div>
+
+    <div class="opts">
+      <div>
+        <h3>추가 옵션</h3>
+        <p class="lead">필요한 것만 더하세요. 인쇄물은 집 앞까지 배송해 드립니다.</p>
+      </div>
+      <table class="opt-tbl">
+        <thead><tr><th>옵션</th><th>금액</th></tr></thead>
+        <tbody>
+          <tr><td>빠른 제작 (영업일 2일 이내)</td><td>+40,000원</td></tr>
+          <tr><td>가족 등장 (1인 추가마다)</td><td>+20,000원</td></tr>
+          <tr><td>A4 액자 인쇄 (1점)</td><td>+30,000원</td></tr>
+          <tr><td>포토북 제작</td><td>별도 견적</td></tr>
+          <tr><td>추가 수정 (무료 1회 이후)</td><td>회당 +15,000원</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="center" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">For Center</p>
+        <h2 class="h2">어린이집·유치원·<br>키즈카페를 위한 영상</h2>
+      </div>
+      <p class="lead">원 고유의 캐릭터로 행사·교육·홍보 영상을 만듭니다. 원아 사진은 보호자 동의를 받은 경우에만 사용하고, 동의가 없는 원아는 캐릭터로 대신합니다.</p>
+    </div>
+    <ul class="biz">
+      <li>
+        <span class="tag">EVENT</span>
+        <h3>행사 영상</h3>
+        <p>재롱잔치, 졸업식, 계절 행사 사진을 AI 연출로 다시 꾸민 기념 영상. 현장 촬영이 필요하면 출장 촬영도 함께 진행합니다.</p>
+        <div class="from">169,000<small>원부터</small></div>
+      </li>
+      <li>
+        <span class="tag">MONTHLY</span>
+        <h3>생활교육 시리즈</h3>
+        <p>손 씻기, 양치, 안전, 인사 예절처럼 매일 반복하는 습관을 원 캐릭터가 알려 주는 짧은 영상. 매달 정해진 편수를 받아 보세요.</p>
+        <div class="from">월 349,000<small>원부터</small></div>
+      </li>
+      <li>
+        <span class="tag">PROMO</span>
+        <h3>원 홍보 패키지</h3>
+        <p>입학 상담 시즌을 위한 원 소개 영상과 블로그·인스타그램용 이미지 세트. 원의 분위기를 따뜻하게 담아냅니다.</p>
+        <div class="from">529,000<small>원부터</small></div>
+      </li>
+    </ul>
+    <p class="note">기관 상품은 편수·길이·촬영 여부에 따라 견적이 달라집니다. 세금계산서 발행 가능 여부는 문의 시 안내해 드립니다.</p>
+  </div>
+</section>
+
+<section id="process" class="sec sec-2">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Process</p>
+        <h2 class="h2">이렇게 진행돼요</h2>
+      </div>
+      <p class="lead">문자나 카톡 한 통이면 시작됩니다. 모든 과정은 메시지로 편하게 주고받을 수 있어요.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>상담</h3><p>상품과 원하는 분위기, 날짜를 알려 주세요.</p></li>
+      <li class="hl"><h3>동의서</h3><p>보호자 동의서를 작성해 보내 주세요.</p></li>
+      <li><h3>사진 전달</h3><p>얼굴이 잘 보이는 사진 5~10장이면 충분해요.</p></li>
+      <li><h3>제작·검수</h3><p>AI로 만들고 PD가 장면마다 직접 다듬어요.</p></li>
+      <li><h3>시안 확인</h3><p>시안을 보시고 1회 무료로 수정해요.</p></li>
+      <li class="hl"><h3>납품·삭제</h3><p>완성본을 보내고 원본 사진은 7일 안에 지워요.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="safety" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Our Promise</p>
+        <h2 class="h2">아이 사진이니까,<br>더 조심스럽게</h2>
+      </div>
+      <p class="lead">아이의 얼굴은 가장 소중한 개인정보입니다. 로그인스튜디오는 아래 네 가지를 꼭 지킵니다.</p>
+    </div>
+    <ul class="safe">
+      <li><span class="ico" style="--c:var(--yellow)">✍️</span><h3>보호자 동의 먼저</h3><p>만 14세 미만 아동의 사진은 법정대리인 동의 없이 받지 않습니다.</p></li>
+      <li><span class="ico" style="--c:var(--mint)">🗑️</span><h3>원본은 바로 삭제</h3><p>보내 주신 사진은 납품 후 7일 안에 파기하고, 원하시면 삭제 확인을 알려 드립니다.</p></li>
+      <li><span class="ico" style="--c:var(--sky)">🔒</span><h3>허락 없이 공개 안 함</h3><p>결과물은 따로 동의해 주신 경우에만 포트폴리오로 씁니다. 거절해도 불이익이 없습니다.</p></li>
+      <li><span class="ico" style="--c:var(--coral)">🎨</span><h3>우리만의 캐릭터</h3><p>기존 만화 캐릭터를 흉내 내지 않고, 저작권 걱정 없는 그림체로만 만듭니다.</p></li>
+    </ul>
+    <div class="safe-cta">
+      <p>제작 전 보호자 동의서를 미리 확인해 보세요.</p>
+      <a class="btn btn-d" href="/kids/consent.html">보호자 동의서 보기</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="sec sec-2">
+  <div class="wrap faq">
+    <div>
+      <p class="eyebrow">FAQ</p>
+      <h2 class="h2">자주 묻는 질문</h2>
+    </div>
+    <div class="qa">
+      <details><summary>사진은 몇 장, 어떤 사진이 좋나요?</summary><p>얼굴이 정면이나 살짝 옆에서 밝게 나온 사진 5~10장이면 충분합니다. 모자나 손에 얼굴이 가려지지 않은 사진이 좋아요. 휴대폰 사진도 괜찮습니다.</p></details>
+      <details><summary>아이와 정말 닮게 나오나요?</summary><p>그림체로 바꾸는 과정이라 사진과 똑같지는 않지만, 아이의 특징이 살아나도록 여러 번 만들어 가장 닮은 장면을 고릅니다. 시안을 보시고 마음에 들지 않는 부분은 수정해 드립니다.</p></details>
+      <details><summary>돌잔치·생일 날짜에 맞출 수 있나요?</summary><p>상품별 제작 기간을 참고해 여유 있게 문의해 주세요. 급하시면 영업일 2일 이내 빠른 제작 옵션을 이용하실 수 있습니다.</p></details>
+      <details><summary>보낸 사진은 어떻게 처리되나요?</summary><p>제작에만 쓰고 납품 후 7일 안에 삭제합니다. 영상 제작 과정에서 해외 AI 서비스를 이용하며, 이 내용은 보호자 동의서에 자세히 적어 두었습니다.</p></details>
+      <details><summary>뽀로로 같은 캐릭터와 함께 나오게 할 수 있나요?</summary><p>기존 캐릭터는 저작권이 있어 만들 수 없습니다. 대신 아이가 좋아하는 동물이나 색깔을 알려 주시면 그 느낌을 담은 우리만의 캐릭터 친구를 만들어 드립니다.</p></details>
+      <details><summary>결제와 환불은 어떻게 하나요?</summary><p>상담 후 계좌이체로 결제하시면 제작을 시작합니다. 제작 시작 전에는 전액 환불되며, 시안을 보내 드린 이후에는 작업 특성상 환불이 어렵습니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="sec">
+  <div class="wrap contact">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2 class="h2">우리 아이 영상,<br>지금 상담하세요</h2>
+      <p class="lead">제작문의는 문자나 카톡으로 주시면 됩니다.</p>
+      <dl class="info">
+        <div><dt>TEL</dt><dd><a href="tel:01082809255">010-8280-9255</a><br><a href="tel:01058979982">010-5897-9982</a></dd></div>
+        <div><dt>EMAIL</dt><dd><a href="mailto:audiogod@naver.com">audiogod@naver.com</a></dd></div>
+        <div><dt>STUDIO</dt><dd>경기도 광주시 초월읍 장담길 21-48<small>30평 단독 건물 · 주차 10대 이상</small></dd></div>
+      </dl>
+    </div>
+    <div class="box">
+      <h3>문자나 <span class="k">카톡</span>으로 이것만 알려 주세요</h3>
+      <ul>
+        <li>원하는 상품 (첫 만남 · 축하해 · 그림책 · 기관 상품)</li>
+        <li>아이 이름과 나이 (영상에 넣을 호칭)</li>
+        <li>필요한 날짜 (행사일)</li>
+        <li>원하는 분위기나 참고 영상 링크</li>
+      </ul>
+      <div class="tels">
+        <a class="btn btn-d" href="sms:01082809255">010-8280-9255 문자</a>
+        <a class="btn btn-o" href="sms:01058979982">010-5897-9982 문자</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="logo" href="/"><span class="logo-mark" aria-hidden="true"></span>로그인스튜디오</a>
+      <p>AI 아이 맞춤 영상 · 어린이집·유치원 영상</p>
+      <p><a href="/kids/consent.html" style="text-decoration:underline;text-underline-offset:3px">보호자 동의서</a> · <a href="/" style="text-decoration:underline;text-underline-offset:3px">로그인스튜디오 메인</a></p>
+    </div>
+    <div class="foot-r">
+      <p>상호 로그인스튜디오</p>
+      <p>경기도 광주시 초월읍 장담길 21-48</p>
+      <p>010-8280-9255 · 010-5897-9982</p>
+      <p>audiogod@naver.com</p>
+      <p>© 2026 로그인스튜디오. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

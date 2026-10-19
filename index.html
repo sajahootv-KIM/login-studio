@@ -495,6 +495,16 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
 .kakao-or{margin:10px 0 0;text-align:center;font-size:14px;color:var(--fg-2)}
 .kakao-tels{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 @media (max-width:520px){.kakao-tels{grid-template-columns:1fr}}
+/* kids card: 카드 전체 클릭 → /kids/ */
+.card-kids{flex-direction:row-reverse;cursor:pointer}
+.card-kids .card-img{position:relative}
+.kids-art{background:#FFF1CF}
+.kids-art svg{display:block;width:100%;height:100%}
+.card-kids:hover .kids-art svg{transform:none}
+.kids-go::after{content:"";position:absolute;inset:0;z-index:4}
+@media (prefers-reduced-motion:no-preference){.kids-float{animation:kfloat 5s ease-in-out infinite}}
+@keyframes kfloat{50%{transform:translateY(-6px)}}
+@media (max-width:1000px){.card-kids{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -507,6 +517,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
       <a href="#studio">스튜디오</a>
       <a href="#process">진행 과정</a>
       <a href="#faq">FAQ</a>
+      <a href="/kids/">키즈 AI영상</a>
     </div>
     <div class="nav-r">
       <a class="btn btn-y" href="#quote">견적 문의</a>
@@ -520,6 +531,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
     <a href="#studio">스튜디오</a>
     <a href="#process">진행 과정</a>
     <a href="#faq">자주 묻는 질문</a>
+    <a href="/kids/">키즈 AI영상 (아이 맞춤 영상)</a>
     <a href="#quote">견적 문의 · 오시는 길</a>
   </div>
 </nav>
@@ -596,6 +608,41 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
             <span class="aiv-rec"><i></i>REC</span><span class="aiv-play" aria-hidden="true"></span><span class="aiv-ai">AI</span>
           </a></div>
         <div class="card-body"><span class="tag">AI VIDEO</span><h3>AI영상 제작</h3><p>AI로 만든 영상과 이미지로 홍보영상, 채널 콘텐츠, 뮤직·배경 영상을 제작합니다. 촬영이 어려운 장면도 AI로 구현하고, 실제 촬영 영상과 섞어 완성할 수도 있습니다.</p><a class="ask" href="#quote">요금 문의 →</a></div>
+      </li>
+      <li class="card card-wide card-kids">
+        <div class="card-img kids-art" aria-hidden="true">
+          <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
+            <rect width="640" height="400" fill="#FFF1CF"/>
+            <g transform="rotate(-6 320 200)"><rect x="150" y="62" width="340" height="280" rx="26" fill="#7ED3B6"/></g>
+            <g transform="rotate(4 320 200)"><rect x="150" y="62" width="340" height="280" rx="26" fill="#8CC4FF"/></g>
+            <rect x="150" y="62" width="340" height="280" rx="26" fill="#fff"/>
+            <clipPath id="kpg"><rect x="150" y="62" width="340" height="214" rx="26"/></clipPath>
+            <g clip-path="url(#kpg)">
+              <rect x="150" y="62" width="340" height="214" fill="#CDE9FF"/>
+              <circle cx="430" cy="110" r="24" fill="#FFE14D"/>
+              <ellipse cx="225" cy="112" rx="34" ry="13" fill="#fff"/><ellipse cx="248" cy="104" rx="22" ry="14" fill="#fff"/>
+              <path d="M150 232 Q240 200 320 226 T490 218 V276 H150Z" fill="#7ED3B6"/>
+              <path d="M150 252 Q250 232 340 248 T490 246 V276 H150Z" fill="#5BBF9C"/>
+              <g class="kids-float">
+                <path d="M270 200 h84 l-10 28 h-64z" fill="#FF8A73"/>
+                <rect x="309" y="140" width="4" height="62" fill="#1E1C17"/>
+                <path d="M313 142 l36 50 h-36z" fill="#fff"/>
+                <circle cx="292" cy="186" r="13" fill="#FFD9B8"/>
+                <path d="M280 183 q12 -18 24 0" fill="#1E1C17"/>
+                <circle cx="288" cy="188" r="1.6" fill="#1E1C17"/><circle cx="296" cy="188" r="1.6" fill="#1E1C17"/>
+                <rect x="281" y="198" width="22" height="8" rx="4" fill="#8CC4FF"/>
+              </g>
+              <path d="M200 160 l4 8 8 1 -6 5 2 8 -8 -4 -8 4 2 -8 -6 -5 8 -1z" fill="#FFE14D"/>
+            </g>
+            <rect x="166" y="78" width="54" height="20" rx="10" fill="rgba(0,0,0,.45)"/><circle cx="178" cy="88" r="4" fill="#FF3B30"/>
+            <text x="186" y="92.5" font-family="JetBrains Mono,monospace" font-size="11" font-weight="700" fill="#fff">REC</text>
+            <text x="172" y="304" font-family="JetBrains Mono,monospace" font-size="10" font-weight="700" letter-spacing="1.5" fill="#5E594C">CHAPTER 01</text>
+            <rect x="170" y="312" width="44" height="22" rx="6" fill="#FFE14D"/>
+            <text x="174" y="328" font-family="Gothic A1,sans-serif" font-size="16" font-weight="800" fill="#1E1C17">하준</text>
+            <text x="216" y="328" font-family="Gothic A1,sans-serif" font-size="16" font-weight="800" fill="#1E1C17">이의 첫 번째 모험</text>
+          </svg>
+        </div>
+        <div class="card-body"><span class="tag">KIDS · NEW</span><h3>키즈 AI영상</h3><p>아이 사진 몇 장으로 동화 속 주인공 영상을 만듭니다. 생일·돌 축하 영상, 그림책 영상부터 어린이집·유치원 행사·교육 영상까지. 원본 사진은 납품 후 7일 안에 삭제합니다.</p><a class="ask kids-go" href="/kids/">키즈 AI영상 보러 가기 →</a></div>
       </li>
     </ul>
   </div>
@@ -716,7 +763,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
       <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"></span>로그인스튜디오</a>
       <p>기획부터 업로드까지, 로그인스튜디오에서.</p>
       <p>영상촬영 · 홍보영상 · AI영상 제작 · 유튜브 라이브 · 외부 행사 음향 · 유튜브 대행 · 쇼츠</p>
-      <p class="map-btns"><a href="https://www.youtube.com/channel/UChjmDy8WQUSmywCqmjcuiFw" target="_blank" rel="noopener"><i style="--c:#FF3B30"></i>유튜브 채널</a></p>
+      <p class="map-btns"><a href="/kids/"><i style="--c:#FFE14D"></i>키즈 AI영상</a><a href="https://www.youtube.com/channel/UChjmDy8WQUSmywCqmjcuiFw" target="_blank" rel="noopener"><i style="--c:#FF3B30"></i>유튜브 채널</a></p>
     </div>
     <div class="foot-r">
       <p>상호 로그인스튜디오</p>

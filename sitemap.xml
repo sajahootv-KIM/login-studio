@@ -9,4 +9,12 @@
     <image:image><image:loc>https://loginstudio.co.kr/image/wide.jpg</image:loc></image:image>
     <image:image><image:loc>https://loginstudio.co.kr/image/lounge.jpg</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://loginstudio.co.kr/kids/</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
+    <loc>https://loginstudio.co.kr/kids/consent.html</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
 </urlset>
