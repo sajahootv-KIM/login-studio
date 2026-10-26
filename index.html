@@ -516,6 +516,8 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
 .nav-kids{display:inline-flex;align-items:center;gap:6px}
 .nav-kids span{font-size:17px;line-height:1}
 @media (prefers-reduced-motion:no-preference){.nav-kids:hover span{animation:wig .5s ease-in-out}}
+/* 키즈 코너 임시 숨김 — 다시 보이게 하려면 아래 한 줄만 지우면 됨 */
+.nav-kids,.card-kids,a[href^="/kids/"]{display:none!important}
 @keyframes wig{25%{transform:rotate(-14deg)}75%{transform:rotate(14deg)}}
 </style>
 </head>
