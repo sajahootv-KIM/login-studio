@@ -3,18 +3,10 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://loginstudio.co.kr/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <image:image><image:loc>https://loginstudio.co.kr/image/hero.jpg</image:loc></image:image>
     <image:image><image:loc>https://loginstudio.co.kr/image/screen.jpg</image:loc></image:image>
     <image:image><image:loc>https://loginstudio.co.kr/image/wide.jpg</image:loc></image:image>
     <image:image><image:loc>https://loginstudio.co.kr/image/lounge.jpg</image:loc></image:image>
-  </url>
-  <url>
-    <loc>https://loginstudio.co.kr/kids/</loc>
-    <lastmod>2026-10-19</lastmod>
-  </url>
-  <url>
-    <loc>https://loginstudio.co.kr/kids/consent.html</loc>
-    <lastmod>2026-10-19</lastmod>
   </url>
 </urlset>

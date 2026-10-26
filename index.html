@@ -182,7 +182,7 @@
      "name": "비용은 얼마인가요?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "영상 종류와 분량, 일정에 따라 견적을 드립니다. 원하시는 영상을 문자나 카톡으로 보내 주시면 확인 후 안내해 드립니다."
+      "text": "출장 촬영은 30만 원부터 시작하며, 영상 종류와 분량, 촬영 시간, 편집 범위에 따라 견적을 드립니다. 원하시는 영상을 문자나 카톡으로 보내 주시면 확인 후 안내해 드립니다."
      }
     },
     {
@@ -516,6 +516,23 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
 .nav-kids{display:inline-flex;align-items:center;gap:6px}
 .nav-kids span{font-size:17px;line-height:1}
 @media (prefers-reduced-motion:no-preference){.nav-kids:hover span{animation:wig .5s ease-in-out}}
+/* director + works */
+.career{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
+.career li{display:flex;flex-direction:column;gap:4px;padding:22px 20px 22px 0;border-bottom:1px solid var(--line)}
+.career li:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}
+.career span{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--yellow)}
+.career b{font-size:clamp(17px,1.8vw,20px);font-weight:700}
+.works{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.work p{margin:12px 0 0;font-weight:600}
+.yt-lite{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;border-radius:16px;overflow:hidden;background:#000;cursor:pointer}
+.yt-lite img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.yt-lite:hover img{transform:scale(1.03)}
+.yt-lite iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt-play{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:12px;background:#FF0000}
+.yt-play::after{content:"";position:absolute;left:27px;top:14px;border-style:solid;border-width:10px 0 10px 17px;border-color:transparent transparent transparent #fff}
+.works-more{margin:32px 0 0}
+@media (max-width:1000px){.works{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.works,.career{grid-template-columns:1fr}.career li:nth-child(even){padding-left:0;border-left:0}}
 /* 키즈 코너 임시 숨김 — 다시 보이게 하려면 아래 한 줄만 지우면 됨 */
 .nav-kids,.card-kids,a[href^="/kids/"]{display:none!important}
 @keyframes wig{25%{transform:rotate(-14deg)}75%{transform:rotate(14deg)}}
@@ -528,6 +545,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
     <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"></span>로그인스튜디오</a>
     <div class="menu">
       <a href="#services">서비스</a>
+      <a href="#works">포트폴리오</a>
       <a href="#studio">스튜디오</a>
       <a href="#process">진행 과정</a>
       <a href="#faq">FAQ</a>
@@ -542,6 +560,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
   </div>
   <div class="mnav" id="mnav" hidden>
     <a href="#services">서비스</a>
+    <a href="#works">포트폴리오</a>
     <a href="#studio">스튜디오</a>
     <a href="#process">진행 과정</a>
     <a href="#faq">자주 묻는 질문</a>
@@ -562,7 +581,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
       <div class="hero-body">
         <p class="eyebrow hero-kw">경기 광주 영상촬영 · 홍보영상 · 유튜브 라이브 · 행사 음향 스튜디오</p>
         <h1>기획부터 업로드까지,<br><em>로그인스튜디오에서</em> 끝냅니다.</h1>
-        <p class="hero-lede">경기도 광주의 단독 건물 스튜디오에서 영상촬영, 홍보영상, AI영상 제작, 유튜브 라이브와 채널 운영, 외부 행사 음향까지 한 팀이 맡습니다. 모든 촬영은 출장도 가능합니다.</p>
+        <p class="hero-lede">경기도 광주의 단독 건물 스튜디오에서 영상촬영, 홍보영상, AI영상 제작, 유튜브 라이브와 채널 운영, 외부 행사 음향까지 한 팀이 맡습니다. 출장 촬영은 <b>30만 원부터</b> 시작합니다.</p>
         <div class="hero-cta">
           <a class="btn btn-y" href="#quote">프로젝트 문의하기</a>
           <a class="btn btn-o" href="#studio">스튜디오 둘러보기</a>
@@ -574,7 +593,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
       <li><b>주차 <span>10</span>대+</b><small>차량 방문도 편하게</small></li>
       <li><b>원스톱</b><small>기획 · 촬영 · 편집 · 운영</small></li>
       <li><b>수정 <span>2</span>회</b><small>무료로 반영</small></li>
-      <li><b><span>출장</span> 촬영</b><small>모든 촬영 출장 가능</small></li>
+      <li><b>출장 <span>30</span>만~</b><small>출장 촬영 시작가</small></li>
     </ul>
   </div>
 </header>
@@ -591,20 +610,18 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
     <ul class="svc">
       <li class="card">
         <div class="card-img"><img src="image/svc-film.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="스튜디오 영상촬영 현장과 편집 타임라인"></div>
-        <div class="card-body"><span class="tag">FILM</span><h3>영상촬영 · 편집</h3><p>모든 촬영이 출장 가능해서, 스튜디오와 현장 어디서든 촬영합니다. 촬영만, 편집만 필요하셔도 되고 자막, 음악, 색보정까지 마무리합니다.</p></div>
+        <div class="card-body"><span class="tag">FILM</span><h3>영상촬영 · 편집</h3><p>모든 촬영이 출장 가능해서, 스튜디오와 현장 어디서든 촬영합니다. 촬영만, 편집만 필요하셔도 되고 자막, 음악, 색보정까지 마무리합니다. 출장 촬영은 30만 원부터입니다.</p></div>
       </li>
       <li class="card">
-        <div class="card-img"><!-- 사진: Gary Ellis, Unsplash 무료 라이선스 (https://unsplash.com/photos/ebX48-W5fMU) -->
-        <img src="image/brand-building.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="기업 홍보영상 제작 이미지, 유리 외벽의 현대식 회사 건물"></div>
+        <div class="card-img"><img src="image/svc-brand-studio.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="로그인스튜디오 화이트 호리존과 카메라·조명 세팅"></div>
         <div class="card-body"><span class="tag">BRAND</span><h3>기업 홍보영상 제작</h3><p>회사와 제품의 강점을 인터뷰와 현장 촬영으로 쉽게 보여주는 홍보영상을 만듭니다.</p></div>
       </li>
       <li class="card">
         <div class="card-img"><img src="image/mixer.jpg" width="898" height="633" loading="lazy" decoding="async" alt="유튜브 라이브 송출에 쓰는 음향 믹서와 모니터"></div>
-        <div class="card-body"><span class="tag">ON AIR</span><h3>유튜브 라이브</h3><p>스튜디오에서 멀티캠으로 촬영하며 유튜브 라이브를 실시간 송출합니다. 카메라 전환, 자막, 음향을 현장에서 함께 운영합니다.</p><a class="ask" href="#quote">요금 문의 →</a></div>
+        <div class="card-body"><span class="tag">ON AIR</span><h3>유튜브 라이브 · 현장 중계</h3><p>스튜디오는 물론 대회, 공연, 세미나 현장으로 출장 가서 멀티캠으로 촬영하고 OBS로 실시간 전환하며 유튜브에 생중계합니다. 카메라 전환, 자막, 음향까지 현장에서 함께 운영합니다.</p><a class="ask" href="#quote">요금 문의 →</a></div>
       </li>
       <li class="card">
-        <!-- 사진: Bee Balogun, Unsplash 무료 라이선스 (https://unsplash.com/photos/KGyzk-EvTwQ) -->
-        <div class="card-img"><img src="image/event-sound.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="행사장에서 음향 엔지니어가 음향 콘솔을 운영하는 모습, 뒤로 관객이 보임"></div>
+        <div class="card-img"><img src="image/svc-sound-studio.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="로그인스튜디오 디지털 음향 믹서와 라이브 컨트롤 데스크"></div>
         <div class="card-body"><span class="tag">LIVE SOUND</span><h3>외부 행사 음향</h3><p>세미나, 강연 같은 소규모 행사 현장에 음향 장비를 가져가 세팅부터 진행 중 운영까지 맡습니다. 행사 영상촬영도 함께 진행할 수 있습니다.</p><a class="ask" href="#quote">요금 문의 →</a></div>
       </li>
       <li class="card">
@@ -612,7 +629,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
         <div class="card-body"><span class="tag">YOUTUBE</span><h3>유튜브 대행</h3><p>채널 기획, 촬영, 편집, 썸네일, 업로드까지 매달 정해진 편수로 운영합니다.</p></div>
       </li>
       <li class="card">
-        <div class="card-img"><img src="image/camera.jpg" width="760" height="653" loading="lazy" decoding="async" alt="삼각대 위 시네마 카메라와 조명"></div>
+        <div class="card-img"><img src="image/camera.jpg" width="760" height="653" loading="lazy" decoding="async" alt="삼각대 위 4K 카메라와 조명"></div>
         <div class="card-body"><span class="tag">9:16</span><h3>쇼츠 제작</h3><p>첫 2초에 시선을 잡는 세로형 영상을 기획하고 빠르게 제작합니다.</p></div>
       </li>
       <li class="card card-wide">
@@ -680,22 +697,48 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
       <figure class="shot g6"><img src="image/lounge.jpg" width="1400" height="686" loading="lazy" decoding="async" alt="상담 라운지" style="object-position:50% 55%"><figcaption><span>F</span>기획 · 상담 라운지</figcaption></figure>
     </div>
     <ul class="gear">
-      <li><span>CAMERA</span><b>시네마 카메라 멀티캠</b></li>
+      <li><span>CAMERA</span><b>4K 카메라 멀티캠</b></li>
       <li><span>LIGHT</span><b>랜턴 · 스포트 조명</b></li>
       <li><span>AUDIO</span><b>디지털 믹서 · 무선 마이크</b></li>
       <li><span>SCREEN</span><b>대형 프로젝션 배경</b></li>
-      <li><span>LIVE</span><b>유튜브 라이브 송출</b></li>
+      <li><span>LIVE</span><b>OBS 유튜브 라이브 송출</b></li>
     </ul>
   </div>
 </section>
 
-<section class="band" aria-label="유튜브 채널">
-  <div class="wrap band-in">
-    <div style="display:flex;gap:18px;align-items:flex-start">
-      <span class="yt" aria-hidden="true"></span>
-      <div><h2>작업물은 로그인 채널에서 먼저 보세요.</h2><p>스튜디오에서 직접 찍고 편집한 영상을 올리고 있습니다.</p></div>
+<section id="director" class="sec sec-2">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Director</p>
+        <h2 class="h2">10년 차 감독이<br><span class="nw">직접 찍습니다.</span></h2>
+      </div>
+      <p class="lead">로그인스튜디오 대표 김공헌 감독이 상담부터 촬영, 편집, 송출까지 직접 맡습니다. 기획한 사람이 끝까지 책임지기 때문에 처음 의도가 흐려지지 않습니다.</p>
     </div>
-    <a class="btn" href="https://www.youtube.com/channel/UChjmDy8WQUSmywCqmjcuiFw" target="_blank" rel="noopener">유튜브 채널 보기</a>
+    <ul class="career">
+      <li><span>CF</span><b>조정래 『정글만리』 TV CF 총감독</b></li>
+      <li><span>GAME</span><b>스타크래프트2 홍보영상 감독</b></li>
+      <li><span>LIVE</span><b>OBS 라이브 송출 10년 · 조정실 메인/서브 운용</b></li>
+      <li><span>YOUTUBE</span><b>홍보영상 제작 · 유튜브 채널 운영 10년</b></li>
+    </ul>
+  </div>
+</section>
+
+<section id="works" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Works</p>
+        <h2 class="h2">말보다<br><span class="nw">영상으로.</span></h2>
+      </div>
+      <p class="lead">로그인스튜디오에서 직접 촬영하고 편집한 작업물입니다. 눌러서 바로 보실 수 있습니다.</p>
+    </div>
+    <ul class="works">
+      <li class="work"><button class="yt-lite" type="button" data-id="DPWhWfUpuDk" aria-label="로그인스튜디오 포트폴리오 하이라이트 재생"><img src="https://i.ytimg.com/vi/DPWhWfUpuDk/hqdefault.jpg" alt="로그인스튜디오 포트폴리오 하이라이트 썸네일" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="yt-play" aria-hidden="true"></span></button><p>로그인스튜디오 포트폴리오 하이라이트</p></li>
+      <li class="work"><button class="yt-lite" type="button" data-id="Dnj-hyCpi1g" aria-label="로그인스튜디오 포트폴리오 재생"><img src="https://i.ytimg.com/vi/Dnj-hyCpi1g/hqdefault.jpg" alt="로그인스튜디오 포트폴리오 썸네일" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="yt-play" aria-hidden="true"></span></button><p>로그인스튜디오 포트폴리오</p></li>
+      <li class="work"><button class="yt-lite" type="button" data-id="zPcerulaqtw" aria-label="렉스턴 스포츠 롤바 제품 컷 영상 재생"><img src="https://i.ytimg.com/vi/zPcerulaqtw/hqdefault.jpg" alt="렉스턴 스포츠 롤바 제품 컷 영상 썸네일" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="yt-play" aria-hidden="true"></span></button><p>렉스턴 스포츠 롤바 제품 컷 영상</p></li>
+    </ul>
+    <p class="works-more"><a class="btn btn-o" href="https://www.youtube.com/channel/UChjmDy8WQUSmywCqmjcuiFw" target="_blank" rel="noopener">유튜브 채널에서 더 보기</a></p>
   </div>
 </section>
 
@@ -727,7 +770,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
       <details open><summary>스튜디오는 어디에 있나요?</summary><p>경기도 광주시 초월읍 장담길 21-48에 있는 30평 단독 건물 스튜디오입니다. 10대 이상 주차할 수 있어 차량으로 편하게 오실 수 있습니다.</p></details>
       <details><summary>출장 촬영도 가능한가요?</summary><p>네, 모든 촬영은 출장도 가능합니다. 스튜디오뿐 아니라 원하시는 장소로 가서 촬영합니다. 장소와 일정을 문자나 카톡으로 알려 주세요.</p></details>
       <details><summary>어떤 영상을 만들 수 있나요?</summary><p>영상촬영과 편집, 기업·제품 홍보영상, AI영상 제작, 유튜브 채널 운영 대행, 쇼츠(세로형 숏폼), 유튜브 라이브 송출을 맡습니다. 외부 행사 현장의 음향 장비 세팅과 운영도 맡습니다.</p></details>
-      <details><summary>비용은 얼마인가요?</summary><p>영상 종류와 분량, 일정에 따라 견적을 드립니다. 원하시는 영상을 문자나 카톡으로 보내 주시면 확인 후 안내해 드립니다.</p></details>
+      <details><summary>비용은 얼마인가요?</summary><p>출장 촬영은 30만 원부터 시작하며, 영상 종류와 분량, 촬영 시간, 편집 범위에 따라 견적을 드립니다. 원하시는 영상을 문자나 카톡으로 보내 주시면 확인 후 안내해 드립니다.</p></details>
       <details><summary>수정은 몇 번까지 되나요?</summary><p>2회까지 무료로 반영합니다. 기획이 바뀌는 수정은 회당 5만 원이 추가됩니다.</p></details>
       <details><summary>촬영 시간이 길어지면 어떻게 되나요?</summary><p>기본 4시간이며, 초과하면 시간당 5만 원이 추가됩니다.</p></details>
       <details><summary>완성된 영상의 권리는 누구에게 있나요?</summary><p>완성본은 고객님께 귀속됩니다. 촬영 원본 파일은 스튜디오 자산으로 보관합니다.</p></details>
@@ -806,6 +849,16 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.
   burger.addEventListener('click',function(){setMenu(mnav.hidden);});
   mnav.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false);});
 })();
+</script>
+<script>
+document.querySelectorAll('.yt-lite').forEach(function(b){b.addEventListener('click',function(){
+  var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';
+  f.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;f.title=b.getAttribute('aria-label');
+  var w=document.createElement('div');w.className='yt-lite';w.appendChild(f);b.replaceWith(w);if(window.gtag)gtag('event','video_play',{video_id:b.dataset.id});},{once:true});});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a||!window.gtag)return;var h=a.getAttribute('href')||'';
+  if(h.indexOf('tel:')===0)gtag('event','contact_click',{method:'phone',link_url:h});
+  else if(h.indexOf('pf.kakao.com')>-1)gtag('event','contact_click',{method:'kakao'});
+  else if(h.indexOf('sms:')===0)gtag('event','contact_click',{method:'sms'});});
 </script>
 </body>
 </html>
